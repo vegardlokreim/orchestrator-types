@@ -1,17 +1,16 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "outDir": "lib",
-        "sourceMap": true,
-        "strict": true,
-        "target": "es2017",
-        "esModuleInterop": true,
+        "composite": true,
         "declaration": true,
-        "declarationMap": true
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "target": "ES2020",
+        "module": "ESNext",
+        "outDir": "lib",
+        "rootDir": "./src"
     },
-    "compileOnSave": true,
     "include": [
         "src/**/*"
     ]
