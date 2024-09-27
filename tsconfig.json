@@ -1,18 +1,17 @@
 {
     "compilerOptions": {
+        "target": "es5",
         "module": "commonjs",
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "outDir": "lib",
-        "sourceMap": true,
-        "strict": true,
-        "target": "es2017",
-        "esModuleInterop": true,
         "declaration": true,
-        "declarationMap": true,
+        "outDir": "./lib",
+        "strict": true,
+        "esModuleInterop": true
     },
-    "compileOnSave": true,
     "include": [
-        "src/**/*"
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib"
     ]
 }
