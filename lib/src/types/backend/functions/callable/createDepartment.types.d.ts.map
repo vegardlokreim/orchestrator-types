@@ -1,1 +1,0 @@
-{"version":3,"file":"createDepartment.types.d.ts","sourceRoot":"","sources":["../../../../../../src/types/backend/functions/callable/createDepartment.types.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,sBAAsB,CAAC;AAE3D,MAAM,MAAM,sBAAsB,GAAG,IAAI,CAAC,mBAAmB,EAAE,IAAI,GAAG,WAAW,GAAG,WAAW,GAAG,WAAW,CAAC,CAAA"}
