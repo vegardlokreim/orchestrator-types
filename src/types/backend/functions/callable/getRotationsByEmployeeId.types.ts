@@ -1,5 +1,5 @@
 import { FirestoreEmployee } from "../../firestoreTypes";
 
-export type Params = {
+export type GetRotationsByEmployeeIdParams = {
     employeeId: FirestoreEmployee["id"]
 }

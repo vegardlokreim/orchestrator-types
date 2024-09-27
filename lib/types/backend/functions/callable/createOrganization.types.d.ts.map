@@ -1,0 +1,1 @@
+{"version":3,"file":"createOrganization.types.d.ts","sourceRoot":"","sources":["../../../../../src/types/backend/functions/callable/createOrganization.types.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,qBAAqB,EAAE,MAAM,sBAAsB,CAAC;AAE7D,MAAM,MAAM,wBAAwB,GAAG,IAAI,CAAC,qBAAqB,EAAE,aAAa,GAAG,WAAW,GAAG,WAAW,CAAC,CAAA"}

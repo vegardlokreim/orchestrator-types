@@ -1,5 +1,5 @@
 import { FirestoreDepartment } from "../../firestoreTypes";
 
-export type Params = {
+export type GetTasksByDepartmentIdParams = {
     departmentId: FirestoreDepartment["id"]
 }
