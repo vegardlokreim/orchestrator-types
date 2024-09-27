@@ -8,8 +8,8 @@
         "strict": true,
         "target": "es2017",
         "esModuleInterop": true,
-        "declaration": true, // Generate .d.ts declaration files
-        "declarationMap": true, // Generate .d.ts.map files for better debugging
+        "declaration": true,
+        "declarationMap": true,
         "composite": true
     },
     "compileOnSave": true,
