@@ -107,4 +107,3 @@ export type FirestoreShiftSwapProposal = {
     createdAt: Timestamp;
     message?: string;
 };
-//# sourceMappingURL=firestoreTypes.d.ts.map

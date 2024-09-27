@@ -5,4 +5,3 @@ export { GetRotationsByEmployeeIdParams } from './types/backend/functions/callab
 export { CreateTaskParams } from './types/backend/functions/callable/createTask.types';
 export { CreateOrganizationParams } from './types/backend/functions/callable/createOrganization.types';
 export { CreateDepartmentParams } from './types/backend/functions/callable/createDepartment.types';
-//# sourceMappingURL=index.d.ts.map

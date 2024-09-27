@@ -9,6 +9,10 @@
         "target": "es2017",
         "esModuleInterop": true,
         "moduleResolution": "node",
+        "declaration": true
     },
     "compileOnSave": true,
+    "include": [
+        "src/**/*"
+    ]
 }

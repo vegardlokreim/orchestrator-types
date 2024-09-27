@@ -1,1 +1,0 @@
-{"version":3,"file":"getTasksByDepartmentId.types.d.ts","sourceRoot":"","sources":["../../../../../src/types/backend/functions/callable/getTasksByDepartmentId.types.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,sBAAsB,CAAC;AAE3D,MAAM,MAAM,4BAA4B,GAAG;IACvC,YAAY,EAAE,mBAAmB,CAAC,IAAI,CAAC,CAAA;CAC1C,CAAA"}
