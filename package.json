@@ -7,6 +7,9 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
+  "compilerOptions": {
+    "composite": true
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
