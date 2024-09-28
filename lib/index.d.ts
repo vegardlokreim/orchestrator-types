@@ -3,7 +3,7 @@ export { Weekday, Shift, Day, Week, FirestoreEmployee, FirestoreDepartment, Fire
 export { GetTasksByDepartmentIdParams } from './types/backend/functions/callable/getTasksByDepartmentId.types';
 export { GetRotationsByEmployeeIdParams } from './types/backend/functions/callable/getRotationsByEmployeeId.types';
 export { GetEmployeesByDepartmentIdParams } from './types/backend/functions/callable/getEmployeesByDepartmentId.types';
-export { GetEmployeeInfoParams } from './types/backend/functions/callable/getEmployeeInfo.types';
+export { GetEmployeeInfoParams, GetEmployeeInfoSuccess } from './types/backend/functions/callable/getEmployeeInfo.types';
 export { GetDepartmentsByOrganizationIdParams } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
 export { CreateTaskParams } from './types/backend/functions/callable/createTask.types';
 export { CreateShiftParams } from './types/backend/functions/callable/createShift.types';
