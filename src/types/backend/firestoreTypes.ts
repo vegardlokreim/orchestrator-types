@@ -23,7 +23,8 @@ export interface Day {
 
 export interface Week {
     weekNumber: number, // weekNumber in rotation, not calendar
-    days: Array<Day>
+    days: Array<Day>,
+    hours?: number
 }
 
 export type FirestoreEmployee = {
