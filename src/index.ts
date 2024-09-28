@@ -14,5 +14,5 @@ export { CreateShiftParams } from './types/backend/functions/callable/createShif
 export { CreateRotationParams, CreateRotationSuccess } from './types/backend/functions/callable/createRotation.types';
 export { CreatePatternParams, CreatePatternSuccess } from './types/backend/functions/callable/createPatter.types';
 export { CreateOrganizationParams } from './types/backend/functions/callable/createOrganization.types';
-export { CreateEmployeeParams } from './types/backend/functions/callable/createEmployee.types';
+export { CreateEmployeeParams, CreateEmployeeSuccess } from './types/backend/functions/callable/createEmployee.types';
 export { CreateDepartmentParams, CreateDepartmentParamsSuccess } from './types/backend/functions/callable/createDepartment.types';
