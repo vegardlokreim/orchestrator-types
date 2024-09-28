@@ -10,4 +10,4 @@ export { CreateShiftParams } from './types/backend/functions/callable/createShif
 export { CreateRotationParams } from './types/backend/functions/callable/createRotation.types';
 export { CreateOrganizationParams } from './types/backend/functions/callable/createOrganization.types';
 export { CreateEmployeeParams } from './types/backend/functions/callable/createEmployee.types';
-export { CreateDepartmentParams } from './types/backend/functions/callable/createDepartment.types';
+export { CreateDepartmentParams, CreateDepartmentParamsSuccess } from './types/backend/functions/callable/createDepartment.types';
