@@ -1,10 +1,10 @@
 import { FirestoreRotation } from "../../firestoreTypes";
 
-export type GetRotationsByEmployeeIdParams = {
-    employeeId: string;
+export type GetRotationsByDepartmentIdParams = {
+    departmentId: string;
 };
 
-export type GetRotationsByEmployeeIdSuccess = {
+export type GetRotationsByDepartmentIdSuccess = {
     code: 200;
     message: string;
     rotations: FirestoreRotation[];
