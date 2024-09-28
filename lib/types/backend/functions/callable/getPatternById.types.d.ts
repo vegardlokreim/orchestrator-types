@@ -5,5 +5,5 @@ export type GetPatternByIdParams = {
 export type GetPatternByIdSuccess = {
     code: 200;
     message: string;
-    pattern: FirebaseFirestore.DocumentData | undefined;
+    pattern: FirestorePattern;
 };
