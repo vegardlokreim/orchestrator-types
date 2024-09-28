@@ -9,7 +9,7 @@
         "target": "es2017",
         "esModuleInterop": true,
         "moduleResolution": "node",
-        "declaration": true,
+        "declaration": true
     },
     "compileOnSave": true,
     "include": [
