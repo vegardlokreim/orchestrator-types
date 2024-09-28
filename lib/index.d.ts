@@ -8,7 +8,7 @@ export { GetEmployeesByIdsParams, GetEmployeesByIdsSuccess } from './types/backe
 export { GetEmployeesByDepartmentIdParams } from './types/backend/functions/callable/getEmployeesByDepartmentId.types';
 export { GetEmployeesByDepartmentIdParams, GetEmployeesByDepartmentIdSuccess } from './types/backend/functions/callable/getEmployeesByDepartment.types';
 export { GetEmployeeInfoParams, GetEmployeeInfoSuccess } from './types/backend/functions/callable/getEmployeeInfo.types';
-export { GetDepartmentsByOrganizationIdParams } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
+export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdSuccess } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
 export { CreateTaskParams } from './types/backend/functions/callable/createTask.types';
 export { CreateShiftParams } from './types/backend/functions/callable/createShift.types';
 export { CreateRotationParams, CreateRotationSuccess } from './types/backend/functions/callable/createRotation.types';
