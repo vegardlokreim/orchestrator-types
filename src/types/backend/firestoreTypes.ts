@@ -67,8 +67,6 @@ export type FirestorePattern = {
     updatedBy: FirestoreEmployee["id"],
     createdBy: FirestoreEmployee["id"], // Possibly irrelevant
     departmentId: FirestoreDepartment["id"]
-
-
 }
 
 export type FirestoreRotation = {

@@ -1,7 +1,9 @@
 export { HomePageProps } from './types/web/HomePage.types';
 export { Weekday, Shift, Day, Week, FirestoreEmployee, FirestoreDepartment, FirestoreOrganization, FirestorePattern, FirestoreRotation, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal } from './types/backend/firestoreTypes';
+export { FirestoreCollection } from './types/backend/FirestoreCollection';
 export { GetTasksByDepartmentIdParams } from './types/backend/functions/callable/getTasksByDepartmentId.types';
 export { GetRotationsByEmployeeIdParams } from './types/backend/functions/callable/getRotationsByEmployeeId.types';
+export { GetEmployeesByIdsParams, GetEmployeesByIdsSuccess } from './types/backend/functions/callable/getEmployeesByIds.types';
 export { GetEmployeesByDepartmentIdParams } from './types/backend/functions/callable/getEmployeesByDepartmentId.types';
 export { GetEmployeeInfoParams, GetEmployeeInfoSuccess } from './types/backend/functions/callable/getEmployeeInfo.types';
 export { GetDepartmentsByOrganizationIdParams } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
