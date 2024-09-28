@@ -1,5 +1,5 @@
 
-import { Timestamp } from "firebase-admin/firestore";
+import { Firestore, Timestamp } from "firebase-admin/firestore";
 
 
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
@@ -32,7 +32,7 @@ export type FirestoreEmployee = {
     name: string
     email?: string
     role?: string
-    departments: Array<{ departmentId: FirestoreDepartment["id"], departmentName: FirestoreDepartment["name"] }>
+    departments: Array<FirestoreDepartment>
     createdAt: Timestamp
     updatedAt: Timestamp
     rotations?: FirestoreRotation[]
