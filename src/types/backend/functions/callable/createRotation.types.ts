@@ -1,14 +1,20 @@
 import { FirestoreDepartment, FirestoreEmployee, FirestoreOrganization, FirestorePattern } from "../../firestoreTypes"
 
 export type CreateRotationParams = {
-    name: string
+    name: string;
     pattern: {
-        patternId: FirestorePattern["id"],
-        weeks: number,
-        rotationPlan: FirestorePattern["weeks"]
+        patternId: FirestorePattern["id"];
+        weeks: number;
+        rotationPlan: FirestorePattern["weeks"];
     }
-    organizationId: FirestoreOrganization["id"],
-    departmentId: FirestoreDepartment["id"],
-    employees: Array<{ employeeId: FirestoreEmployee["id"], order: number }>
-    startDate: Date
+    organizationId: FirestoreOrganization["id"];
+    departmentId: FirestoreDepartment["id"];
+    employees: Array<{ employeeId: FirestoreEmployee["id"], order: number }>;
+    startDate: Date;
+}
+
+
+export type CreateRotationSuccess = {
+    code: 201;
+    message: string;
 }

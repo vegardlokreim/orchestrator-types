@@ -14,3 +14,7 @@ export type CreateRotationParams = {
     }>;
     startDate: Date;
 };
+export type CreateRotationSuccess = {
+    code: 201;
+    message: string;
+};
