@@ -10,6 +10,7 @@ export { GetDepartmentsByOrganizationIdParams } from './types/backend/functions/
 export { CreateTaskParams } from './types/backend/functions/callable/createTask.types';
 export { CreateShiftParams } from './types/backend/functions/callable/createShift.types';
 export { CreateRotationParams } from './types/backend/functions/callable/createRotation.types';
+export { CreatePatternParams, CreatePatternSuccess } from './types/backend/functions/callable/createPatter.types';
 export { CreateOrganizationParams } from './types/backend/functions/callable/createOrganization.types';
 export { CreateEmployeeParams } from './types/backend/functions/callable/createEmployee.types';
 export { CreateDepartmentParams, CreateDepartmentParamsSuccess } from './types/backend/functions/callable/createDepartment.types';
