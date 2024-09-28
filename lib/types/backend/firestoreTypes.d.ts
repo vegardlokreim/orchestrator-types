@@ -10,7 +10,7 @@ export interface Shift {
 }
 export interface Day {
     shift: Shift | null;
-    tasks?: string[];
+    tasks?: Array<FirestoreTask>;
     day: Weekday;
     weekdayNumber: number;
 }
