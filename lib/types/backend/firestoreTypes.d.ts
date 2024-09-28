@@ -17,6 +17,7 @@ export interface Day {
 export interface Week {
     weekNumber: number;
     days: Array<Day>;
+    hours?: number;
 }
 export type FirestoreEmployee = {
     id: string;
