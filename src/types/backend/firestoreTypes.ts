@@ -4,18 +4,19 @@ import { Timestamp } from "firebase-admin/firestore";
 
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
 
-export interface Shift {
+export interface FirestoreShift {
     id: string;
     title: string;
     colorCode: string
     duration: number,
     shortCode: string,
-    allowedDays: Weekday[]
+    allowedDays: Weekday[],
+    departmentId: FirestoreDepartment["id"]
 }
 
 
 export interface Day {
-    shift: Shift | null,
+    shift: FirestoreShift | null,
     tasks?: Array<FirestoreTask>
     day: Weekday,
     weekdayNumber: number
@@ -53,6 +54,7 @@ export interface FirestoreOrganization {
     name: string
     id: string
     departments: Array<FirestoreDepartment["id"]>
+    employeeIds: Array<FirestoreEmployee["id"]>
     createdAt: Timestamp
     updatedAt: Timestamp
 }
@@ -109,7 +111,7 @@ export interface ShiftInstance {
     weekNumber: number; // Week number in the rotation plan
     day: Weekday; // Day of the week
     date: Date; // Actual date of the shift
-    shiftId: Shift["id"]; // ID of the shift
+    shiftId: FirestoreShift["id"]; // ID of the shift
 }
 
 
@@ -120,8 +122,8 @@ export type FirestoreShiftSwapProposal = {
     id: string;
     proposerId: FirestoreEmployee["id"]; // Employee proposing the swap
     recipientId: FirestoreEmployee["id"]; // Employee being asked to swap
-    proposerShift: ShiftInstance; // Shift details of the proposer
-    recipientShift: ShiftInstance; // Shift details of the recipient
+    proposerShift: ShiftInstance; // FirestoreShift details of the proposer
+    recipientShift: ShiftInstance; // FirestoreShift details of the recipient
     status: SwapStatus; // Current status of the swap proposal
     proposedAt: Timestamp; // Timestamp when the proposal was made
     respondedAt?: Timestamp; // Timestamp when the proposal was responded to

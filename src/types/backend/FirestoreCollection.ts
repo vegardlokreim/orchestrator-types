@@ -4,3 +4,6 @@ export type FirestoreCollection =
     | "rotations"
     | "patterns"
     | "departments"
+    | "shifts"
+    | "tasks"
+    | "roles"

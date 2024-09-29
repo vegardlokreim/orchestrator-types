@@ -1,15 +1,16 @@
 import { Timestamp } from "firebase-admin/firestore";
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";
-export interface Shift {
+export interface FirestoreShift {
     id: string;
     title: string;
     colorCode: string;
     duration: number;
     shortCode: string;
     allowedDays: Weekday[];
+    departmentId: FirestoreDepartment["id"];
 }
 export interface Day {
-    shift: Shift | null;
+    shift: FirestoreShift | null;
     tasks?: Array<FirestoreTask>;
     day: Weekday;
     weekdayNumber: number;
@@ -42,6 +43,7 @@ export interface FirestoreOrganization {
     name: string;
     id: string;
     departments: Array<FirestoreDepartment["id"]>;
+    employeeIds: Array<FirestoreEmployee["id"]>;
     createdAt: Timestamp;
     updatedAt: Timestamp;
 }
@@ -90,7 +92,7 @@ export interface ShiftInstance {
     weekNumber: number;
     day: Weekday;
     date: Date;
-    shiftId: Shift["id"];
+    shiftId: FirestoreShift["id"];
 }
 export type SwapStatus = "pending" | "accepted" | "declined" | "cancelled";
 export type FirestoreShiftSwapProposal = {

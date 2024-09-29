@@ -1,10 +1,10 @@
 import { FirestoreEmployee, FirestoreOrganization } from "../../firestoreTypes";
 
-export type GetOrganizatonsByEmployeeIdParams = {
+export type GetOrganizationsByEmployeeIdParams = {
     employeeId: FirestoreEmployee['id'];
 }
 
-export type GetOrganizatonsByEmployeeIdSuccess = {
+export type GetOrganizationsByEmployeeIdSuccess = {
     code: 200;
     message: string;
     organizations: Array<FirestoreOrganization>;
