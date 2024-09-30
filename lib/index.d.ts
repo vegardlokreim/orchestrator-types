@@ -13,8 +13,8 @@ export { GetEmployeesByIdsParams, GetEmployeesByIdsSuccess } from './types/backe
 export { GetEmployeesByDepartmentIdParams, GetEmployeesByDepartmentIdSuccess } from './types/backend/functions/callable/getEmployeesByDepartmenId.types';
 export { GetEmployeeInfoParams, GetEmployeeInfoSuccess } from './types/backend/functions/callable/getEmployeeInfo.types';
 export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdSuccess } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
-export { CreateTaskParams } from './types/backend/functions/callable/createTask.types';
-export { CreateShiftParams } from './types/backend/functions/callable/createShift.types';
+export { CreateTaskParams, CreateTaskSuccess } from './types/backend/functions/callable/createTask.types';
+export { CreateShiftParams, CreateShiftSuccess } from './types/backend/functions/callable/createShift.types';
 export { CreateRotationParams, CreateRotationSuccess } from './types/backend/functions/callable/createRotation.types';
 export { CreatePatternParams, CreatePatternSuccess } from './types/backend/functions/callable/createPatter.types';
 export { CreateOrganizationParams, CreateOrganizationSuccess } from './types/backend/functions/callable/createOrganization.types';

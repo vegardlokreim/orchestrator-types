@@ -3,7 +3,7 @@ export type GetEmployeeInfoParams = {
     id: FirestoreEmployee["id"];
 };
 export type GetEmployeeInfoSuccess = {
-    code: string;
+    code: number;
     message: string;
     employee: FirestoreEmployee;
     departments: FirestoreDepartment[];
