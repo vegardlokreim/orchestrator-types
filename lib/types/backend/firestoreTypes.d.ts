@@ -25,7 +25,7 @@ export type FirestoreEmployee = {
     name: string;
     email?: string;
     role?: string;
-    departments: Array<FirestoreDepartment>;
+    departments: Array<FirestoreDepartment["id"]>;
     createdAt: Timestamp;
     updatedAt: Timestamp;
     rotations?: FirestoreRotation[];
