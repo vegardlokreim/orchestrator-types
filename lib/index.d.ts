@@ -20,3 +20,13 @@ export { CreatePatternParams, CreatePatternResponse } from './types/backend/func
 export { CreateOrganizationParams, CreateOrganizationResponse } from './types/backend/functions/callable/createOrganization.types';
 export { CreateDepartmentParams, CreateDepartmentResponse } from './types/backend/functions/callable/createDepartment.types';
 export { GetOrganizationsByUserIdParams, GetOrganizationsByUserIdResponse } from './types/backend/functions/callable/GetOrganizationsByUserId.types';
+export { WhereFilterOpType, WhereClause } from './functions/getDocsWhere';
+export { timestampToDate } from './functions/timestampToDate';
+export { getDocsWhere } from './functions/getDocsWhere';
+export { formatDate } from './functions/formatDate';
+export { callFunction } from './functions/callFunction';
+export { useScrollToTop } from './functions/hooks/useScrollToTop';
+export { useFetchDocsWhere } from './functions/hooks/useFetchDocsWhere';
+export { useFetchDocs } from './functions/hooks/useFetchDocs';
+export { useFetchDoc } from './functions/hooks/useFetchDoc';
+export { firestoreCollections, userStoragePath } from './types/typeConsts';

@@ -1,20 +1,45 @@
+// {
+//     "compilerOptions": {
+//         "module": "commonjs",
+//         "noImplicitReturns": true,
+//         "noUnusedLocals": true,
+//         "outDir": "lib",
+//         "sourceMap": true,
+//         "strict": true,
+//         "target": "es2017",
+//         "esModuleInterop": true,
+//         "moduleResolution": "node",
+//         "declaration": true,
+//         "noEmitOnError": false,
+//         "noEmit": false,
+//     },
+//     "compileOnSave": true,
+//     "include": [
+//         "src/**/*"
+//     ]
+// }
+
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "outDir": "lib",
-        "sourceMap": true,
-        "strict": true,
-        "target": "es2017",
-        "esModuleInterop": true,
-        "moduleResolution": "node",
-        "declaration": true,
-        "noEmitOnError": false,
-        "noEmit": false,
+      "target": "ES2018",
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "allowSyntheticDefaultImports": true,
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "outDir": "./dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "jsx": "react-jsx",
     },
-    "compileOnSave": true,
     "include": [
-        "src/**/*"
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
     ]
-}
+  }

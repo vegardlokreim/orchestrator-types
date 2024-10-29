@@ -1,28 +1,45 @@
 {
-  "name": "orchestrator-types",
-  "version": "1.0.0",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "files": [
-    "lib/"
-  ],
-  "module": "./lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+"name": "orchestrator-types",
+"version": "1.0.0",
+"main": "./dist/index.js",
+"module": "./dist/index.mjs",
+"types": "./dist/index.d.ts",
+"exports": {
+  ".": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@types/react": "^18.3.12",
-    "typescript": "^5.6.2"
+  "./dist": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
   },
-  "dependencies": {
-    "firebase": "^10.13.2",
-    "firebase-admin": "^12.5.0",
-    "glob": "^11.0.0",
-    "react": "^18.3.1"
+  "./dist/*": {
+    "types": "./dist/*.d.ts",
+    "import": "./dist/*.mjs",
+    "require": "./dist/*.js"
   }
+},
+"scripts": {
+  "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+  "prepublishOnly": "npm run build",
+  "update": "node generateExports.js; npm run build;"
+},
+"keywords": [],
+"author": "",
+"license": "ISC",
+"description": "",
+"devDependencies": {
+  "@types/react": "^18.3.11",
+  "typescript": "^5.6.2"
+},
+"dependencies": {
+  "firebase": "^10.14.0",
+  "firebase-admin": "^12.6.0",
+  "firebase-functions": "^6.0.1",
+  "glob": "^11.0.0",
+  "react": "^18.3.1",
+  "tsup": "^8.3.0"
+}
 }
