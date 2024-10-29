@@ -1,6 +1,6 @@
+export { Subset, FirestoreCollection, UserStoragePath } from './types/commonTypes';
 export { HomePageProps } from './types/web/HomePage.types';
 export { Weekday, FirestoreShift, Day, Week, FirestoreUser, FirestoreDepartment, FirestoreOrganization, FirestorePattern, FirestoreRotation, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal } from './types/backend/firestoreTypes';
-export { FirestoreCollection } from './types/backend/FirestoreCollection';
 export { GetUsersByIdsParams, GetUsersByIdsResponse } from './types/backend/functions/callable/getUsersByIds.types';
 export { GetUsersByDepartmentIdParams, GetUsersByDepartmentIdResponse } from './types/backend/functions/callable/getUsersByDepartmenId.types';
 export { GetUserInfoParams, GetUserInfoResponse } from './types/backend/functions/callable/getUserInfo.types';
