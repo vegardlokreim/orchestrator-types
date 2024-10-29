@@ -4,7 +4,7 @@ export type GetUserByDepartmentIdParams = {
     departmentId: FirestoreDepartment['id'];
 }
 
-export type GetUserByByDepartmentIdResponse= {
+export type GetUserByDepartmentIdResponse= {
     code: 200,
     message: string,
     users: Array<FirestoreUser>

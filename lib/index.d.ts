@@ -9,7 +9,7 @@ export { GetRotationByIdParams, GetRotationByIdResponse } from './types/backend/
 export { GetPatternsByUserIdParams, GetPatternsByUserIdResponse } from './types/backend/functions/callable/getPatternsByEmployeeId';
 export { GetPatternByIdParams, GetPatternByIdResponses } from './types/backend/functions/callable/getPatternById.types';
 export { GetUserByIdsParams, GetUserByIdsResponse } from './types/backend/functions/callable/getEmployeesByIds.types';
-export { GetUserByDepartmentIdParams, GetUserByByDepartmentIdResponse } from './types/backend/functions/callable/getEmployeesByDepartmenId.types';
+export { GetUserByDepartmentIdParams, GetUserByDepartmentIdResponse } from './types/backend/functions/callable/getEmployeesByDepartmenId.types';
 export { GetEmployeeInfoParams, GetEmployeeInfoResponse } from './types/backend/functions/callable/getEmployeeInfo.types';
 export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdResponse } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
 export { CreateTaskParams, CreateTaskResponse } from './types/backend/functions/callable/createTask.types';
