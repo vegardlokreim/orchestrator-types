@@ -1,10 +1,10 @@
 import { FirestoreDepartment, FirestoreUser, FirestoreOrganization } from "../../firestoreTypes"
 
-export type GetEmployeeInfoParams = {
+export type GetUserInfoParams = {
     id: FirestoreUser["id"]
 }
 
-export type GetEmployeeInfoResponse = {
+export type GetUserInfoResponse = {
     code: number,
     message: string,
     user: FirestoreUser,

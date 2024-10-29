@@ -120,8 +120,8 @@ export type SwapStatus = "pending" | "accepted" | "declined" | "cancelled";
 
 export type FirestoreShiftSwapProposal = {
     id: string;
-    proposerId: FirestoreUser["id"]; // Employee proposing the swap
-    recipientId: FirestoreUser["id"]; // Employee being asked to swap
+    proposerId: FirestoreUser["id"]; // User proposing the swap
+    recipientId: FirestoreUser["id"]; // User being asked to swap
     proposerShift: ShiftInstance; // FirestoreShift details of the proposer
     recipientShift: ShiftInstance; // FirestoreShift details of the recipient
     status: SwapStatus; // Current status of the swap proposal

@@ -3,7 +3,7 @@ export { Weekday, FirestoreShift, Day, Week, FirestoreUser, FirestoreDepartment,
 export { FirestoreCollection } from './types/backend/FirestoreCollection';
 export { GetUsersByIdsParams, GetUsersByIdsResponse } from './types/backend/functions/callable/getUsersByIds.types';
 export { GetUsersByDepartmentIdParams, GetUsersByDepartmentIdResponse } from './types/backend/functions/callable/getUsersByDepartmenId.types';
-export { GetEmployeeInfoParams, GetEmployeeInfoResponse } from './types/backend/functions/callable/getUserInfo.types';
+export { GetUserInfoParams, GetUserInfoResponse } from './types/backend/functions/callable/getUserInfo.types';
 export { GetTasksByDepartmentIdParams, GetTasksByDepartmentIdResponse } from './types/backend/functions/callable/getTasksByDepartmentId.types';
 export { GetShiftsByDepartmentIdParams, GetShiftsByDepartmentIdResponse } from './types/backend/functions/callable/getShiftsByDepartmentId.types';
 export { GetRotationsByUserIdParams, GetRotationsByUserIdResponse } from './types/backend/functions/callable/getRotationsByUserId.types';
@@ -12,7 +12,7 @@ export { GetRotationByIdParams, GetRotationByIdResponse } from './types/backend/
 export { GetPatternsByUserIdParams, GetPatternsByUserIdResponse } from './types/backend/functions/callable/getPatternsByUserId';
 export { GetPatternByIdParams, GetPatternByIdResponse } from './types/backend/functions/callable/getPatternById.types';
 export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdResponse } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
-export { CreateEmployeeParams, CreateUserResponse } from './types/backend/functions/callable/createUser.types';
+export { CreateUserParams, CreateUserResponse } from './types/backend/functions/callable/createUser.types';
 export { CreateTaskParams, CreateTaskResponse } from './types/backend/functions/callable/createTask.types';
 export { CreateShiftParams, CreateShiftResponse } from './types/backend/functions/callable/createShift.types';
 export { CreateRotationParams, CreateRotationResponse } from './types/backend/functions/callable/createRotation.types';
