@@ -1,10 +1,10 @@
 import { FirestoreDepartment, FirestoreUser } from "../../firestoreTypes";
 
-export type GetUserByDepartmentIdParams = {
+export type GetUsersByDepartmentIdParams = {
     departmentId: FirestoreDepartment['id'];
 }
 
-export type GetUserByDepartmentIdResponse= {
+export type GetUsersByDepartmentIdResponse= {
     code: 200,
     message: string,
     users: Array<FirestoreUser>
