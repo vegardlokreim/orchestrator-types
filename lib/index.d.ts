@@ -10,7 +10,7 @@ export { GetRotationsByUserIdParams, GetRotationsByUserIdResponse } from './type
 export { GetRotationsByDepartmentIdParams, GetRotationsByDepartmentIdResponse } from './types/backend/functions/callable/getRotationsByDepartmentId.types';
 export { GetRotationByIdParams, GetRotationByIdResponse } from './types/backend/functions/callable/getRotationById.types';
 export { GetPatternsByUserIdParams, GetPatternsByUserIdResponse } from './types/backend/functions/callable/getPatternsByUserId';
-export { GetPatternByIdParams, GetPatternByIdResponses } from './types/backend/functions/callable/getPatternById.types';
+export { GetPatternByIdParams, GetPatternByIdResponse } from './types/backend/functions/callable/getPatternById.types';
 export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdResponse } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
 export { CreateEmployeeParams, CreateUserResponse } from './types/backend/functions/callable/createUser.types';
 export { CreateTaskParams, CreateTaskResponse } from './types/backend/functions/callable/createTask.types';
