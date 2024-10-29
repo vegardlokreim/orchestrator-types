@@ -4,7 +4,7 @@ export type GetRotationsByDepartmentIdParams = {
     departmentId: string;
 };
 
-export type GetRotationsByDepartmentIdSuccess = {
+export type GetRotationsByDepartmentIdResponse = {
     code: 200;
     message: string;
     rotations: FirestoreRotation[];

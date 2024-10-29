@@ -1,13 +1,13 @@
-import { FirestoreDepartment, FirestoreEmployee, FirestoreOrganization } from "../../firestoreTypes"
+import { FirestoreDepartment, FirestoreUser, FirestoreOrganization } from "../../firestoreTypes"
 
 export type GetEmployeeInfoParams = {
-    id: FirestoreEmployee["id"]
+    id: FirestoreUser["id"]
 }
 
-export type GetEmployeeInfoSuccess = {
+export type GetEmployeeInfoResponse = {
     code: number,
     message: string,
-    employee: FirestoreEmployee,
+    user: FirestoreUser,
     departments: FirestoreDepartment[],
     organizations: FirestoreOrganization[]
 }

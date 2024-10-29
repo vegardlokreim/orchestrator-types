@@ -1,1 +1,1 @@
-export type FirestoreCollection = "organizations" | "employees" | "rotations" | "patterns" | "departments" | "shifts" | "tasks" | "roles";
+export type FirestoreCollection = "organizations" | "users" | "rotations" | "patterns" | "departments" | "shifts" | "tasks" | "roles";

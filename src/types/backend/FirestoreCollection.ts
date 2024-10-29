@@ -1,6 +1,6 @@
 export type FirestoreCollection =
     | "organizations"
-    | "employees"
+    | "users"
     | "rotations"
     | "patterns"
     | "departments"

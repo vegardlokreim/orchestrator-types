@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "firebase": "^10.13.2",
-    "firebase-admin": "^12.5.0"
+    "firebase-admin": "^12.5.0",
+    "glob": "^11.0.0"
   }
 }

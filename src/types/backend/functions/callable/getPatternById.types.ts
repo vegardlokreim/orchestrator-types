@@ -4,7 +4,7 @@ export type GetPatternByIdParams = {
     patternId: FirestorePattern['id'];
 }
 
-export type GetPatternByIdSuccess = {
+export type GetPatternByIdResponses = {
     code: 200;
     message: string;
     pattern: FirestorePattern;

@@ -4,7 +4,7 @@ export type GetShiftsByDepartmentIdParams = {
     departmentId: string;
 };
 
-export type GetShiftsByDepartmentIdSuccess = {
+export type GetShiftsByDepartmentIdResponse= {
     code: 200;
     message: string;
     shifts: FirestoreShift[];

@@ -20,7 +20,7 @@ export interface Week {
     days: Array<Day>;
     hours?: number;
 }
-export type FirestoreEmployee = {
+export type FirestoreUser = {
     id: string;
     name: string;
     email?: string;
@@ -33,7 +33,7 @@ export type FirestoreEmployee = {
 export interface FirestoreDepartment {
     id: string;
     name: string;
-    employees: Array<FirestoreEmployee["id"]>;
+    users: Array<FirestoreUser["id"]>;
     organizationId: FirestoreOrganization["id"];
     createdAt: Timestamp;
     updatedAt: Timestamp;
@@ -43,7 +43,7 @@ export interface FirestoreOrganization {
     name: string;
     id: string;
     departments: Array<FirestoreDepartment["id"]>;
-    employeeIds: Array<FirestoreEmployee["id"]>;
+    userIds: Array<FirestoreUser["id"]>;
     createdAt: Timestamp;
     updatedAt: Timestamp;
 }
@@ -53,8 +53,8 @@ export type FirestorePattern = {
     weeks: Array<Week>;
     createdAt: Timestamp;
     updatedAt: Timestamp;
-    updatedBy: FirestoreEmployee["id"];
-    createdBy: FirestoreEmployee["id"];
+    updatedBy: FirestoreUser["id"];
+    createdBy: FirestoreUser["id"];
     departmentId: FirestoreDepartment["id"];
 };
 export type FirestoreRotation = {
@@ -67,11 +67,11 @@ export type FirestoreRotation = {
         weeks: number;
         rotationPlan: Array<Week>;
     };
-    employees: Array<{
-        employeeId: FirestoreEmployee["id"];
+    users: Array<{
+        userId: FirestoreUser["id"];
         order: number;
     }>;
-    employeeIds: Array<FirestoreEmployee["id"]>;
+    userIds: Array<FirestoreUser["id"]>;
     startDate: Timestamp;
     startOnRotationWeek?: number;
 };
@@ -84,8 +84,8 @@ export type FirestoreTask = {
     allowedDays: Array<Weekday>;
     createdAt: Timestamp;
     updatedAt: Timestamp;
-    updatedBy: FirestoreEmployee["id"];
-    createdBy: FirestoreEmployee["id"];
+    updatedBy: FirestoreUser["id"];
+    createdBy: FirestoreUser["id"];
 };
 export interface ShiftInstance {
     rotationId: FirestoreRotation["id"];
@@ -97,8 +97,8 @@ export interface ShiftInstance {
 export type SwapStatus = "pending" | "accepted" | "declined" | "cancelled";
 export type FirestoreShiftSwapProposal = {
     id: string;
-    proposerId: FirestoreEmployee["id"];
-    recipientId: FirestoreEmployee["id"];
+    proposerId: FirestoreUser["id"];
+    recipientId: FirestoreUser["id"];
     proposerShift: ShiftInstance;
     recipientShift: ShiftInstance;
     status: SwapStatus;

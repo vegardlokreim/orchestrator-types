@@ -11,7 +11,7 @@ export type CreateShiftParams = {
     // Maybe one administrator is part of different departments, then the user will have to provide department before creating the shift. this also applies to patters
 }
 
-export type CreateShiftSuccess = {
+export type CreateShiftResponse = {
     code: 201;
     message: string;
 }

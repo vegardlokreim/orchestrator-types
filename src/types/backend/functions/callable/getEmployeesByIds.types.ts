@@ -1,23 +1,23 @@
-import { FirestoreEmployee } from "../../firestoreTypes";
+import { FirestoreUser } from "../../firestoreTypes";
 
 /**
- * Retrieves employee documents from Firestore based on an array of employee IDs.
+ * Retrieves User documents from Firestore based on an array of user IDs.
  * 
- * @param data - Object containing `employeeIds`, an array of strings representing employee IDs.
+ * @param data - Object containing `userIds`, an array of strings representing User IDs.
  * @returns An object with:
  *   - `code: 200`: Success status code.
  *   - `message: "Success"`: Success message.
- *   - `employees`: An array of employee documents.
+ *   - `users`: An array of User documents.
  * 
  * @Throws:
- * - `HttpsError("invalid-argument")` if `employeeIds` is missing or not all elements are strings.
+ * - `HttpsError("invalid-argument")` if `userIds` is missing or not all elements are strings.
  * 
- * @Note: Can be used to retrieve a single employee by passing an array with one ID.
+ * @Note: Can be used to retrieve a single user by passing an array with one ID.
  */
-export type GetEmployeesByIdsParams = { employeeIds: Array<FirestoreEmployee["id"]> }
+export type GetUserByIdsParams = { userIds: Array<FirestoreUser["id"]> }
 
-export type GetEmployeesByIdsSuccess = {
+export type GetUserByIdsResponse = {
     code: 200;
     message: string;
-    employees: Array<FirestoreEmployee>;
+    users: Array<FirestoreUser>;
 }

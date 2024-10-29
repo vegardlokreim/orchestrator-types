@@ -7,7 +7,7 @@ export type CreateShiftParams = {
     allowedDays: string[];
     departmentId: FirestoreDepartment['id'];
 };
-export type CreateShiftSuccess = {
+export type CreateShiftResponse = {
     code: 201;
     message: string;
 };

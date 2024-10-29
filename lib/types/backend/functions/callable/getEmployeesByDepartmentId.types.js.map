@@ -1,1 +1,1 @@
-{"version":3,"file":"getEmployeesByDepartmentId.types.js","sourceRoot":"","sources":["../../../../../src/types/backend/functions/callable/getEmployeesByDepartmentId.types.ts"],"names":[],"mappings":""}
+{"version":3,"file":"getusersByDepartmentId.types.js","sourceRoot":"","sources":["../../../../../src/types/backend/functions/callable/getusersByDepartmentId.types.ts"],"names":[],"mappings":""}

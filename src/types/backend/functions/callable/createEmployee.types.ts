@@ -1,8 +1,8 @@
-import { FirestoreEmployee } from "../../firestoreTypes";
+import { FirestoreUser } from "../../firestoreTypes";
 
-export type CreateEmployeeParams = Omit<FirestoreEmployee, "id" | "createdAt" | "updatedAt">
+export type CreateEmployeeParams = Omit<FirestoreUser, "id" | "createdAt" | "updatedAt">
 
-export type CreateEmployeeSuccess = {
+export type CreateUserResponse = {
     code: 201;
     message: string;
 }

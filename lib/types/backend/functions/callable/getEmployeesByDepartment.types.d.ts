@@ -1,9 +1,9 @@
-import { FirestoreDepartment, FirestoreEmployee } from "../../firestoreTypes";
-export type GetEmployeesByDepartmentIdParams = {
+import { FirestoreDepartment, FirestoreUser } from "../../firestoreTypes";
+export type GetusersByDepartmentIdParams = {
     departmentId: FirestoreDepartment['id'];
 };
-export type GetEmployeesByDepartmentIdSuccess = {
+export type GetusersByDepartmentIdSuccess = {
     code: 200;
     message: string;
-    employees: Array<FirestoreEmployee>;
+    users: Array<FirestoreUser>;
 };

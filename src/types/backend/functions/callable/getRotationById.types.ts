@@ -4,7 +4,7 @@ export type GetRotationByIdParams = {
     rotationId: string;
 };
 
-export type GetRotationByIdSuccess = {
+export type GetRotationByIdResponse = {
     code: 200;
     message: string;
     rotation: FirestoreRotation;

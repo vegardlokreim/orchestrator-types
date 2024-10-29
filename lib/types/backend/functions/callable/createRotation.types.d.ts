@@ -1,4 +1,4 @@
-import { FirestoreDepartment, FirestoreEmployee, FirestoreOrganization, FirestorePattern } from "../../firestoreTypes";
+import { FirestoreDepartment, FirestoreUser, FirestoreOrganization, FirestorePattern } from "../../firestoreTypes";
 export type CreateRotationParams = {
     name: string;
     pattern: {
@@ -8,13 +8,13 @@ export type CreateRotationParams = {
     };
     organizationId: FirestoreOrganization["id"];
     departmentId: FirestoreDepartment["id"];
-    employees: Array<{
-        employeeId: FirestoreEmployee["id"];
+    users: Array<{
+        userId: FirestoreUser["id"];
         order: number;
     }>;
     startDate: Date;
 };
-export type CreateRotationSuccess = {
+export type CreateRotationResponse = {
     code: 201;
     message: string;
 };
