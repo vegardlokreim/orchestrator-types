@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from "react";
+import React, { useEffect, useCallback, useState, Dispatch, SetStateAction } from "react";
 import { getDocsWhere, WhereClause } from "../getDocsWhere";
 import { Firestore } from "firebase/firestore";
 import { FirestoreCollection } from "../../types/commonTypes";
@@ -15,7 +15,7 @@ export function useFetchDocsWhere<T>(
     collectionName: FirestoreCollection,
     whereClauses: WhereClause<T>[],
     dependencies: any[],
-    setData?: React.Dispatch<React.SetStateAction<T[] | undefined>>,
+    setData?: Dispatch<SetStateAction<T[] | undefined>>,
 ): UseFetchDocsWhereResult<T> {
     const [internalData, setInternalData] = useState<T[] | undefined>();
     const [internalError, setInternalError] = useState<string>();

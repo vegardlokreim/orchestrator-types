@@ -1,6 +1,6 @@
 import { Timestamp } from 'firebase-admin/firestore';
 import { WhereFilterOp, Firestore, QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
-import React$1 from 'react';
+import { Dispatch, SetStateAction } from 'react';
 
 declare const firestoreCollections: readonly ["organizations", "users", "rotations", "patterns", "departments", "shifts", "tasks", "roles"];
 declare const userStoragePath: readonly ["profilePicture", "driversLicense", "signatures", "contracts", "carPickupAgreements", "carDeliveryAgreements"];
@@ -340,7 +340,7 @@ interface UseFetchDocsWhereResult<T> {
     isLoading: boolean;
     refetch: () => Promise<T[] | null>;
 }
-declare function useFetchDocsWhere<T>(db: Firestore, collectionName: FirestoreCollection, whereClauses: WhereClause<T>[], dependencies: any[], setData?: React$1.Dispatch<React$1.SetStateAction<T[] | undefined>>): UseFetchDocsWhereResult<T>;
+declare function useFetchDocsWhere<T>(db: Firestore, collectionName: FirestoreCollection, whereClauses: WhereClause<T>[], dependencies: any[], setData?: Dispatch<SetStateAction<T[] | undefined>>): UseFetchDocsWhereResult<T>;
 
 interface UseFetchDocsResult<T> {
     data: T[] | undefined;
@@ -348,7 +348,7 @@ interface UseFetchDocsResult<T> {
     isLoading: boolean;
     refetch: () => Promise<T[] | null>;
 }
-declare function useFetchDocs<T>(db: Firestore, collectionName: FirestoreCollection, setExternalData?: React.Dispatch<React.SetStateAction<T[]>> | React.Dispatch<React.SetStateAction<T[] | undefined>>): UseFetchDocsResult<T>;
+declare function useFetchDocs<T>(db: Firestore, collectionName: FirestoreCollection, setExternalData?: Dispatch<SetStateAction<T[]>> | Dispatch<SetStateAction<T[] | undefined>>): UseFetchDocsResult<T>;
 
 interface UseFetchDocResult<T> {
     data: T | undefined;
@@ -356,6 +356,6 @@ interface UseFetchDocResult<T> {
     isLoading: boolean;
     refetch: () => Promise<T | null>;
 }
-declare function useFetchDoc<T>(db: Firestore, collectionName: FirestoreCollection, docId: string | undefined, setExternalData?: React.Dispatch<React.SetStateAction<T | undefined>>): UseFetchDocResult<T>;
+declare function useFetchDoc<T>(db: Firestore, collectionName: FirestoreCollection, docId: string | undefined, setExternalData?: Dispatch<SetStateAction<T | undefined>>): UseFetchDocResult<T>;
 
 export { type CreateDepartmentParams, type CreateDepartmentResponse, type CreateOrganizationParams, type CreateOrganizationResponse, type CreatePatternParams, type CreatePatternResponse, type CreateRotationParams, type CreateRotationResponse, type CreateShiftParams, type CreateShiftResponse, type CreateTaskParams, type CreateTaskResponse, type CreateUserParams, type CreateUserResponse, type Day, type FirestoreCollection, type FirestoreDepartment, type FirestoreOrganization, type FirestorePattern, type FirestoreRotation, type FirestoreShift, type FirestoreShiftSwapProposal, type FirestoreTask, type FirestoreUser, type GetDepartmentsByOrganizationIdParams, type GetDepartmentsByOrganizationIdResponse, type GetOrganizationsByUserIdParams, type GetOrganizationsByUserIdResponse, type GetPatternByIdParams, type GetPatternByIdResponse, type GetPatternsByUserIdParams, type GetPatternsByUserIdResponse, type GetRotationByIdParams, type GetRotationByIdResponse, type GetRotationsByDepartmentIdParams, type GetRotationsByDepartmentIdResponse, type GetRotationsByUserIdParams, type GetRotationsByUserIdResponse, type GetShiftsByDepartmentIdParams, type GetShiftsByDepartmentIdResponse, type GetTasksByDepartmentIdParams, type GetTasksByDepartmentIdResponse, type GetUserInfoParams, type GetUserInfoResponse, type GetUsersByDepartmentIdParams, type GetUsersByDepartmentIdResponse, type GetUsersByIdsParams, type GetUsersByIdsResponse, type HomePageProps, type ShiftInstance, type Subset, type SwapStatus, type UserStoragePath, type Week, type Weekday, type WhereClause, type WhereFilterOpType, callFunction, firestoreCollections, formatDate, getDocsWhere, timestampToDate, useFetchDoc, useFetchDocs, useFetchDocsWhere, useScrollToTop, userStoragePath };
