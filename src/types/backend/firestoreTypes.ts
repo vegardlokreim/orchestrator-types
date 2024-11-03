@@ -36,7 +36,15 @@ export type FirestoreUserRole = {
     updatedAt: Timestamp
 }
 
+export type FirestoreDepartmentGroup = {
+    id: string
+    name: string
+    department: FirestoreDepartment["id"]
+    users: Array<FirestoreUser["id"]>
 
+    createdAt: Timestamp
+    updatedAt: Timestamp
+}
 
 export type FirestoreUser = {
     id: string
@@ -112,6 +120,14 @@ export type FirestoreTask = {
     colorCode: string,
     departmentId: FirestoreDepartment["id"],
     allowedDays: Array<Weekday>,
+
+    duration?: number,
+
+    details?: {
+        isPreMidShift?: boolean,
+        isPostMidShift?: boolean,
+    }
+
     createdAt: Timestamp,
     updatedAt: Timestamp,
     updatedBy: FirestoreUser["id"]
