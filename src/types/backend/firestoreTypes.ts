@@ -1,5 +1,6 @@
 
 import { Timestamp } from "firebase-admin/firestore";
+import { USER_ROLES } from "./typeConsts";
 
 
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
@@ -28,11 +29,13 @@ export interface Week {
     hours?: number
 }
 
+
+
 export type FirestoreUser = {
     id: string
     name: string
     email?: string
-    role?: string
+    role?: typeof USER_ROLES[number]
     departments: Array<FirestoreDepartment["id"]>
     createdAt: Timestamp
     updatedAt: Timestamp
