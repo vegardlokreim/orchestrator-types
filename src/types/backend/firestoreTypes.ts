@@ -45,8 +45,8 @@ export type FirestoreUser = {
     fullName: string,
     email: string
     phone: string
-    roles?: Array<FirestoreUserRole>,
-    departments: Array<FirestoreDepartment["id"]>
+    roles: Array<FirestoreUserRole>,
+    departments?: Array<FirestoreDepartment["id"]>
     createdAt: Timestamp
     updatedAt: Timestamp
     rotations?: FirestoreRotation[]

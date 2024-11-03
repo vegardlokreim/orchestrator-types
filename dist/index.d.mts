@@ -51,8 +51,8 @@ type FirestoreUser = {
     fullName: string;
     email: string;
     phone: string;
-    roles?: Array<FirestoreUserRole>;
-    departments: Array<FirestoreDepartment["id"]>;
+    roles: Array<FirestoreUserRole>;
+    departments?: Array<FirestoreDepartment["id"]>;
     createdAt: Timestamp;
     updatedAt: Timestamp;
     rotations?: FirestoreRotation[];
@@ -250,7 +250,7 @@ type GetDepartmentsByOrganizationIdResponse = {
     departments: Array<FirestoreDepartment>;
 };
 
-type CreateUserParams = Omit<FirestoreUser, "id" | "createdAt" | "updatedAt">;
+type CreateUserParams = Omit<FirestoreUser, "id" | "fullName" | "createdAt" | "updatedAt">;
 type CreateUserResponse = {
     code: 201;
     message: string;
