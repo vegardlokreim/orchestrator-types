@@ -2,7 +2,7 @@ import { Timestamp } from 'firebase-admin/firestore';
 import { WhereFilterOp, Firestore, QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
 import { Dispatch, SetStateAction } from 'react';
 
-declare const firestoreCollections: readonly ["organizations", "users", "rotations", "patterns", "departments", "shifts", "tasks", "roles"];
+declare const firestoreCollections: readonly ["organizations", "users", "rotations", "patterns", "departments", "shifts", "tasks", "roles", "departmentGroups", "shiftSwapProposals", "shiftSwaps"];
 declare const userStoragePath: readonly ["profilePicture", "driversLicense", "signatures", "contracts", "carPickupAgreements", "carDeliveryAgreements"];
 
 type Subset<T> = {

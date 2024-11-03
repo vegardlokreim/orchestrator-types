@@ -7,6 +7,10 @@ export const firestoreCollections = [
   "shifts",
   "tasks",
   "roles",
+  "departmentGroups",
+  "shiftSwapProposals",
+  "shiftSwaps",
+
 ] as const
 
 export const userStoragePath = [

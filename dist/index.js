@@ -235,7 +235,10 @@ var firestoreCollections = [
   "departments",
   "shifts",
   "tasks",
-  "roles"
+  "roles",
+  "departmentGroups",
+  "shiftSwapProposals",
+  "shiftSwaps"
 ];
 var userStoragePath = [
   "profilePicture",
