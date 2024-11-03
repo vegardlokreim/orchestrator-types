@@ -1,7 +1,7 @@
 // types
 export { Subset, FirestoreCollection, UserStoragePath } from './types/commonTypes';
 export { HomePageProps } from './types/web/HomePage.types';
-export { Weekday, FirestoreShift, Day, Week, FirestoreUser, FirestoreDepartment, FirestoreOrganization, FirestorePattern, FirestoreRotation, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal } from './types/backend/firestoreTypes';
+export { Weekday, FirestoreShift, Day, Week, FirestoreUserRole, FirestoreUser, FirestoreDepartment, FirestoreOrganization, FirestorePattern, FirestoreRotation, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal } from './types/backend/firestoreTypes';
 export { GetUsersByIdsParams, GetUsersByIdsResponse } from './types/backend/functions/callable/getUsersByIds.types';
 export { GetUsersByDepartmentIdParams, GetUsersByDepartmentIdResponse } from './types/backend/functions/callable/getUsersByDepartmenId.types';
 export { GetUserInfoParams, GetUserInfoResponse } from './types/backend/functions/callable/getUserInfo.types';
@@ -37,5 +37,6 @@ export { useFetchDoc } from './functions/hooks/useFetchDoc';
 
 // consts
 export { firestoreCollections, userStoragePath } from './types/typeConsts';
+export { USER_ROLES } from './types/backend/typeConsts';
 
 

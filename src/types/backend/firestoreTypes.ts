@@ -29,13 +29,23 @@ export interface Week {
     hours?: number
 }
 
+export type FirestoreUserRole = {
+    role: typeof USER_ROLES[number],
+    department: FirestoreDepartment["id"]
+    createdAt: Timestamp,
+    updatedAt: Timestamp
+}
+
 
 
 export type FirestoreUser = {
     id: string
-    name: string
-    email?: string
-    role?: typeof USER_ROLES[number]
+    firstName: string,
+    lastName: string,
+    fullName: string,
+    email: string
+    phone: string
+    roles?: Array<FirestoreUserRole>,
     departments: Array<FirestoreDepartment["id"]>
     createdAt: Timestamp
     updatedAt: Timestamp

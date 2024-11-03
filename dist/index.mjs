@@ -209,7 +209,18 @@ var userStoragePath = [
   "carPickupAgreements",
   "carDeliveryAgreements"
 ];
+
+// src/types/backend/typeConsts.ts
+var USER_ROLES = [
+  "ADMIN",
+  "DEPARTMENT_MANAGER",
+  "OVERLEGE",
+  "LIS1",
+  "LIS2",
+  "LIS3"
+];
 export {
+  USER_ROLES,
   callFunction,
   firestoreCollections,
   formatDate,
