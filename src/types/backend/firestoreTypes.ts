@@ -58,6 +58,7 @@ export type FirestoreUser = {
     createdAt: Timestamp
     updatedAt: Timestamp
     rotations?: FirestoreRotation[]
+    rotationIds?: Array<FirestoreRotation["id"]>
 }
 
 export interface FirestoreDepartment {

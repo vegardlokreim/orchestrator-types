@@ -64,6 +64,7 @@ type FirestoreUser = {
     createdAt: Timestamp;
     updatedAt: Timestamp;
     rotations?: FirestoreRotation[];
+    rotationIds?: Array<FirestoreRotation["id"]>;
 };
 interface FirestoreDepartment {
     id: string;
