@@ -1,6 +1,7 @@
 
 import { Timestamp } from "firebase-admin/firestore";
 import { USER_ROLES } from "./typeConsts";
+import { AssignedUser } from "./FirestoreRotation";
 
 
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
@@ -93,25 +94,6 @@ export type FirestorePattern = {
     departmentId: FirestoreDepartment["id"]
 }
 
-export type FirestoreRotation = {
-
-    id: string,
-    name: string,
-    departmentId: FirestoreDepartment["id"]
-    organizationId: FirestoreOrganization["id"]
-    pattern: {
-        patternId: FirestorePattern["id"],
-        weeks: number, // Number of weeks in the pattern
-        rotationPlan: Array<Week>
-    },
-    users: Array<{
-        userId: FirestoreUser["id"],
-        order: number
-    }>,
-    userIds: Array<FirestoreUser["id"]>
-    startDate: Timestamp // Start date of the rotation
-    startOnRotationWeek?: number
-}
 
 
 export type FirestoreTask = {
@@ -160,3 +142,24 @@ export type FirestoreShiftSwapProposal = {
     createdAt: Timestamp;
     message?: string; // Optional message from the proposer
 }
+
+
+export interface FirestoreRotation {
+    id: string
+    basicInfo: {
+        name: string
+        startDate: string
+        departmentId: FirestoreDepartment["id"]
+        groupId?: FirestoreGroup["id"]
+    }
+    users: Array<AssignedUser>
+    userIds: Array<FirestoreUser["id"]>
+}
+
+export interface FirestoreGroup {
+    id: string;
+    name: string;
+    departmentId: FirestoreDepartment["id"];
+    userIds: Array<FirestoreUser["id"]>;
+}
+

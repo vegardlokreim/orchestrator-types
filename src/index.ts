@@ -1,7 +1,8 @@
 // types
-export { Subset, FirestoreCollection, UserStoragePath } from './types/commonTypes';
+export { Subset, DeepRequired, DeepRequiredNonNull, FirestoreCollection, UserStoragePath } from './types/commonTypes';
 export { HomePageProps } from './types/web/HomePage.types';
-export { Weekday, FirestoreShift, Day, Week, FirestoreUserRole, FirestoreDepartmentGroup, FirestoreUser, FirestoreDepartment, FirestoreOrganization, FirestorePattern, FirestoreRotation, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal } from './types/backend/firestoreTypes';
+export { Weekday, FirestoreShift, Day, Week, FirestoreUserRole, FirestoreDepartmentGroup, FirestoreUser, FirestoreDepartment, FirestoreOrganization, FirestorePattern, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal, FirestoreRotation, FirestoreGroup } from './types/backend/firestoreTypes';
+export { RotationBuilderState, AssignedUser, DaySchedule, WeekPattern } from './types/backend/FirestoreRotation';
 export { GetUsersByIdsParams, GetUsersByIdsResponse } from './types/backend/functions/callable/getUsersByIds.types';
 export { GetUsersByDepartmentIdParams, GetUsersByDepartmentIdResponse } from './types/backend/functions/callable/getUsersByDepartmenId.types';
 export { GetUserInfoParams, GetUserInfoResponse } from './types/backend/functions/callable/getUserInfo.types';
