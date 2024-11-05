@@ -2,7 +2,7 @@ export interface RotationPatternDay {
     shiftId: string,
     taskIds: string[]
 }
-export interface CreateRotation1Params {
+export interface CreateRotationParams {
     basicInfo: {
         name: string,
         startDate: string,
@@ -29,7 +29,7 @@ export interface CreateRotation1Params {
     }[]
 }
 
-export interface CreateRotation1Response {
+export interface CreateRotationResponse {
     code: 201,
     message: "Rotation created successfully",
 }
