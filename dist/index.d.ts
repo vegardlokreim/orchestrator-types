@@ -354,29 +354,7 @@ interface RotationPatternDay {
     shiftId: string;
     taskIds: string[];
 }
-interface CreateRotationParams {
-    basicInfo: {
-        name: string;
-        startDate: string;
-        departmentId: string;
-        groupId?: string;
-    };
-    doctors: {
-        doctorId: string;
-        startWeek: number;
-    }[];
-    weekPatterns: {
-        patternId: number;
-        days: {
-            monday: RotationPatternDay;
-            tuesday: RotationPatternDay;
-            wednesday: RotationPatternDay;
-            thursday: RotationPatternDay;
-            friday: RotationPatternDay;
-            saturday: RotationPatternDay;
-            sunday: RotationPatternDay;
-        };
-    }[];
+interface CreateRotationParams extends Omit<RotationBuilderState, "currentStep"> {
 }
 interface CreateRotationResponse {
     code: 201;
