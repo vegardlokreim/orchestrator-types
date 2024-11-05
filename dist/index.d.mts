@@ -202,6 +202,9 @@ interface FirestoreRotation {
     };
     users: Array<AssignedUser>;
     userIds: Array<FirestoreUser["id"]>;
+    createdAt: Timestamp;
+    updatedAt: Timestamp;
+    createdBy: FirestoreUser["id"];
 }
 interface FirestoreGroup {
     id: string;
@@ -354,8 +357,7 @@ interface RotationPatternDay {
     shiftId: string;
     taskIds: string[];
 }
-interface CreateRotationParams extends Omit<RotationBuilderState, "currentStep"> {
-}
+type CreateRotationParams = Omit<FirestoreRotation, "id" | "createdAt" | "updatedAt">;
 interface CreateRotationResponse {
     code: 201;
     message: "Rotation created successfully";

@@ -154,6 +154,10 @@ export interface FirestoreRotation {
     }
     users: Array<AssignedUser>
     userIds: Array<FirestoreUser["id"]>
+
+    createdAt: Timestamp
+    updatedAt: Timestamp
+    createdBy: FirestoreUser["id"]
 }
 
 export interface FirestoreGroup {
