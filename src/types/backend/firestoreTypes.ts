@@ -156,6 +156,7 @@ export interface FirestoreRotation {
     weekPatterns: Array<WeekPattern>
     users: Array<AssignedUser>
     userIds: Array<FirestoreUser["id"]>
+    offset: number
 
     createdAt: Timestamp
     updatedAt: Timestamp

@@ -12,6 +12,7 @@ export interface RotationBuilderState {
         departmentId: FirestoreDepartment["id"]
         groupId?: FirestoreGroup["id"]
     } | null
+    offset: number
     users: Array<AssignedUser>
     weekPatterns: Array<WeekPattern>
 }

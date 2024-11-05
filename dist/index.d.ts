@@ -59,6 +59,7 @@ interface RotationBuilderState {
         departmentId: FirestoreDepartment["id"];
         groupId?: FirestoreGroup["id"];
     } | null;
+    offset: number;
     users: Array<AssignedUser>;
     weekPatterns: Array<WeekPattern>;
 }
@@ -202,6 +203,7 @@ interface FirestoreRotation {
     weekPatterns: Array<WeekPattern>;
     users: Array<AssignedUser>;
     userIds: Array<FirestoreUser["id"]>;
+    offset: number;
     createdAt: Timestamp;
     updatedAt: Timestamp;
     createdBy: FirestoreUser["id"];
