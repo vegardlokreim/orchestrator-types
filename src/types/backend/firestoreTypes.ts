@@ -37,15 +37,7 @@ export type FirestoreUserRole = {
     updatedAt: Timestamp
 }
 
-export type FirestoreDepartmentGroup = {
-    id: string
-    name: string
-    department: FirestoreDepartment["id"]
-    users: Array<FirestoreUser["id"]>
 
-    createdAt: Timestamp
-    updatedAt: Timestamp
-}
 
 export type FirestoreUser = {
     id: string
@@ -150,7 +142,7 @@ export interface FirestoreRotation {
         name: string
         startDate: string
         departmentId: FirestoreDepartment["id"]
-        groupId?: FirestoreGroup["id"]
+        groupId?: FirestoreDepartmentGroup["id"]
     }
 
     weekPatterns: Array<WeekPattern>
@@ -166,10 +158,12 @@ export interface FirestoreRotation {
     createdBy: FirestoreUser["id"]
 }
 
-export interface FirestoreGroup {
-    id: string;
-    name: string;
-    departmentId: FirestoreDepartment["id"];
-    userIds: Array<FirestoreUser["id"]>;
-}
+export type FirestoreDepartmentGroup = {
+    id: string
+    name: string
+    department: FirestoreDepartment["id"]
+    users: Array<FirestoreUser["id"]>
 
+    createdAt: Timestamp
+    updatedAt: Timestamp
+}

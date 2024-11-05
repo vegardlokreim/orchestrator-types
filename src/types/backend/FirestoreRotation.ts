@@ -1,4 +1,11 @@
-import { FirestoreDepartment, FirestoreGroup, FirestoreRotation, FirestoreTask, FirestoreUser, Weekday } from "./firestoreTypes";
+import {
+    FirestoreDepartment,
+    FirestoreDepartmentGroup,
+    FirestoreRotation,
+    FirestoreTask,
+    FirestoreUser,
+    Weekday
+} from "./firestoreTypes";
 
 
 // RotationBuilderState types
@@ -10,7 +17,7 @@ export interface RotationBuilderState {
         name: string
         startDate: string | Date
         departmentId: FirestoreDepartment["id"]
-        groupId?: FirestoreGroup["id"]
+        groupId?: FirestoreDepartmentGroup["id"]
     } | null
     offset: number
     users: Array<AssignedUser>
