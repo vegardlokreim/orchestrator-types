@@ -17,8 +17,7 @@ export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdRes
 export { CreateUserParams, CreateUserResponse } from './types/backend/functions/callable/createUser.types';
 export { CreateTaskParams, CreateTaskResponse } from './types/backend/functions/callable/createTask.types';
 export { CreateShiftParams, CreateShiftResponse } from './types/backend/functions/callable/createShift.types';
-export { RotationPatternDay, CreateRotation1Params, CreateRotation1Response } from './types/backend/functions/callable/createRotation1.types';
-export { CreateRotationParams, CreateRotationResponse } from './types/backend/functions/callable/createRotation.types';
+export { RotationPatternDay, CreateRotation1Params, CreateRotation1Response } from './types/backend/functions/callable/createRotation.types';
 export { CreatePatternParams, CreatePatternResponse } from './types/backend/functions/callable/createPattern.types';
 export { CreateOrganizationParams, CreateOrganizationResponse } from './types/backend/functions/callable/createOrganization.types';
 export { CreateDepartmentParams, CreateDepartmentResponse } from './types/backend/functions/callable/createDepartment.types';

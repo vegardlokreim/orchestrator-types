@@ -1,20 +1,35 @@
-import { FirestoreDepartment, FirestoreUser, FirestoreOrganization, FirestorePattern } from "../../firestoreTypes"
+export interface RotationPatternDay {
+    shiftId: string,
+    taskIds: string[]
+}
+export interface CreateRotation1Params {
+    basicInfo: {
+        name: string,
+        startDate: string,
+        departmentId: string,
+        groupId?: string
 
-export type CreateRotationParams = {
-    name: string;
-    pattern: {
-        patternId: FirestorePattern["id"];
-        weeks: number;
-        rotationPlan: FirestorePattern["weeks"];
     }
-    organizationId: FirestoreOrganization["id"];
-    departmentId: FirestoreDepartment["id"];
-    users: Array<{ userId: FirestoreUser["id"], order: number }>;
-    startDate: Date;
+    doctors: {
+        doctorId: string,
+        startWeek: number
+    }[]
+
+    weekPatterns: {
+        patternId: number, // week number in the rotation
+        days: {
+            monday: RotationPatternDay
+            tuesday: RotationPatternDay
+            wednesday: RotationPatternDay
+            thursday: RotationPatternDay
+            friday: RotationPatternDay
+            saturday: RotationPatternDay
+            sunday: RotationPatternDay
+        }
+    }[]
 }
 
-
-export type CreateRotationResponse = {
-    code: 201;
-    message: string;
+export interface CreateRotation1Response {
+    code: 201,
+    message: "Rotation created successfully",
 }
