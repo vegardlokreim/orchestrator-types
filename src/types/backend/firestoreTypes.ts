@@ -1,7 +1,7 @@
 
 import { Timestamp } from "firebase-admin/firestore";
 import { USER_ROLES } from "./typeConsts";
-import { AssignedUser } from "./FirestoreRotation";
+import { AssignedUser, WeekPattern } from "./FirestoreRotation";
 
 
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
@@ -152,6 +152,8 @@ export interface FirestoreRotation {
         departmentId: FirestoreDepartment["id"]
         groupId?: FirestoreGroup["id"]
     }
+
+    weekPatterns: Array<WeekPattern>
     users: Array<AssignedUser>
     userIds: Array<FirestoreUser["id"]>
 

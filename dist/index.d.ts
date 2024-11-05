@@ -199,6 +199,7 @@ interface FirestoreRotation {
         departmentId: FirestoreDepartment["id"];
         groupId?: FirestoreGroup["id"];
     };
+    weekPatterns: Array<WeekPattern>;
     users: Array<AssignedUser>;
     userIds: Array<FirestoreUser["id"]>;
     createdAt: Timestamp;
