@@ -62,6 +62,8 @@ interface RotationBuilderState {
     offset: number;
     users: Array<AssignedUser>;
     weekPatterns: Array<WeekPattern>;
+    isDeprecated?: boolean;
+    replacedBy?: FirestoreRotation["id"];
 }
 interface AssignedUser {
     userId: FirestoreUser["id"] | null;
@@ -204,6 +206,8 @@ interface FirestoreRotation {
     users: Array<AssignedUser>;
     userIds: Array<FirestoreUser["id"]>;
     offset: number;
+    isDeprecated?: boolean;
+    replacedBy?: FirestoreRotation["id"];
     createdAt: Timestamp;
     updatedAt: Timestamp;
     createdBy: FirestoreUser["id"];

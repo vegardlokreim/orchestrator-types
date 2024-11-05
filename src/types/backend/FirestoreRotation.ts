@@ -1,4 +1,4 @@
-import { FirestoreDepartment, FirestoreGroup, FirestoreTask, FirestoreUser, Weekday } from "./firestoreTypes";
+import { FirestoreDepartment, FirestoreGroup, FirestoreRotation, FirestoreTask, FirestoreUser, Weekday } from "./firestoreTypes";
 
 
 // RotationBuilderState types
@@ -15,6 +15,8 @@ export interface RotationBuilderState {
     offset: number
     users: Array<AssignedUser>
     weekPatterns: Array<WeekPattern>
+    isDeprecated?: boolean;
+    replacedBy?: FirestoreRotation["id"];
 }
 
 export interface AssignedUser {

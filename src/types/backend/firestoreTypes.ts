@@ -158,6 +158,9 @@ export interface FirestoreRotation {
     userIds: Array<FirestoreUser["id"]>
     offset: number
 
+    isDeprecated?: boolean;
+    replacedBy?: FirestoreRotation["id"];
+
     createdAt: Timestamp
     updatedAt: Timestamp
     createdBy: FirestoreUser["id"]
