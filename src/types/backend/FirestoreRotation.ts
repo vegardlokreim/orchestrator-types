@@ -8,23 +8,6 @@ import {
 } from "./firestoreTypes";
 
 
-// RotationBuilderState types
-export interface RotationBuilderState {
-
-    currentStep: 1 | 2 | 3 | 4
-
-    basicInfo: {
-        name: string
-        startDate: string | Date
-        departmentId: FirestoreDepartment["id"]
-        groupId?: FirestoreDepartmentGroup["id"]
-    } | null
-    offset: number
-    users: Array<AssignedUser>
-    weekPatterns: Array<WeekPattern>
-    replaces: FirestoreRotation["id"] | null;
-}
-
 export interface AssignedUser {
     userId: FirestoreUser["id"] | null;
     fullName: string | null;
@@ -41,4 +24,18 @@ export interface DaySchedule {
 export interface WeekPattern {
     patternId: number;
     days: Record<Weekday, DaySchedule>;
+}
+
+export interface RotationBuilderState {
+    currentStep: 1 | 2 | 3 | 4;
+    basicInfo: {
+        name: string;
+        startDate: string | Date;
+        departmentId: FirestoreDepartment["id"];
+        groupId?: FirestoreDepartmentGroup["id"];
+    } | null;
+    offset: number;
+    users: Array<AssignedUser>;
+    weekPatterns: Array<WeekPattern>;
+    replaces: FirestoreRotation["id"] | null;
 }

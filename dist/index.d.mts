@@ -51,19 +51,6 @@ type HomePageProps = {
 
 declare const USER_ROLES: readonly ["ADMIN", "DEPARTMENT_MANAGER", "OVERLEGE", "LIS1", "LIS2", "LIS3"];
 
-interface RotationBuilderState {
-    currentStep: 1 | 2 | 3 | 4;
-    basicInfo: {
-        name: string;
-        startDate: string | Date;
-        departmentId: FirestoreDepartment["id"];
-        groupId?: FirestoreDepartmentGroup["id"];
-    } | null;
-    offset: number;
-    users: Array<AssignedUser>;
-    weekPatterns: Array<WeekPattern>;
-    replaces: FirestoreRotation["id"] | null;
-}
 interface AssignedUser {
     userId: FirestoreUser["id"] | null;
     fullName: string | null;
@@ -78,6 +65,19 @@ interface DaySchedule {
 interface WeekPattern {
     patternId: number;
     days: Record<Weekday, DaySchedule>;
+}
+interface RotationBuilderState {
+    currentStep: 1 | 2 | 3 | 4;
+    basicInfo: {
+        name: string;
+        startDate: string | Date;
+        departmentId: FirestoreDepartment["id"];
+        groupId?: FirestoreDepartmentGroup["id"];
+    } | null;
+    offset: number;
+    users: Array<AssignedUser>;
+    weekPatterns: Array<WeekPattern>;
+    replaces: FirestoreRotation["id"] | null;
 }
 
 type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";
