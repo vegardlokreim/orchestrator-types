@@ -38,4 +38,5 @@ export interface RotationBuilderState {
     users: Array<AssignedUser>;
     weekPatterns: Array<WeekPattern>;
     replaces: FirestoreRotation["id"] | null;
+    replacesData: FirestoreRotation | null;
 }
