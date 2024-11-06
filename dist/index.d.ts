@@ -77,8 +77,7 @@ interface RotationBuilderState {
     offset: number;
     users: Array<AssignedUser>;
     weekPatterns: Array<WeekPattern>;
-    replaces: FirestoreRotation["id"] | null;
-    replacesData: FirestoreRotation | null;
+    replaces: FirestoreRotation | null;
 }
 
 type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";

@@ -37,6 +37,5 @@ export interface RotationBuilderState {
     offset: number;
     users: Array<AssignedUser>;
     weekPatterns: Array<WeekPattern>;
-    replaces: FirestoreRotation["id"] | null;
-    replacesData: FirestoreRotation | null;
+    replaces: FirestoreRotation | null;
 }
