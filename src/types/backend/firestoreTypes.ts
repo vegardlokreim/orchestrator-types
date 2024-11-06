@@ -1,7 +1,6 @@
-
-import { Timestamp } from "firebase-admin/firestore";
-import { USER_ROLES } from "./typeConsts";
-import { AssignedUser, WeekPattern } from "./FirestoreRotation";
+import {Timestamp} from "firebase-admin/firestore";
+import {USER_ROLES} from "./typeConsts";
+import {AssignedUser, WeekPattern} from "./FirestoreRotation";
 
 
 export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
@@ -152,6 +151,7 @@ export interface FirestoreRotation {
 
     isDeprecated?: boolean;
     replacedBy?: FirestoreRotation["id"];
+    replaces?: FirestoreRotation["id"];
 
     createdAt: Timestamp
     updatedAt: Timestamp

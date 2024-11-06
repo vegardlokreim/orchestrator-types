@@ -200,6 +200,7 @@ interface FirestoreRotation {
     offset: number;
     isDeprecated?: boolean;
     replacedBy?: FirestoreRotation["id"];
+    replaces?: FirestoreRotation["id"];
     createdAt: Timestamp;
     updatedAt: Timestamp;
     createdBy: FirestoreUser["id"];
