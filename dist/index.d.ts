@@ -62,8 +62,7 @@ interface RotationBuilderState {
     offset: number;
     users: Array<AssignedUser>;
     weekPatterns: Array<WeekPattern>;
-    isDeprecated?: boolean;
-    replacedBy?: FirestoreRotation["id"];
+    replaces?: FirestoreRotation["id"];
 }
 interface AssignedUser {
     userId: FirestoreUser["id"] | null;
@@ -319,15 +318,6 @@ type GetPatternByIdResponse = {
     pattern: FirestorePattern;
 };
 
-type GetOrganizationsByUserIdParams = {
-    userId: FirestoreUser['id'];
-};
-type GetOrganizationsByUserIdResponse = {
-    code: 200;
-    message: string;
-    organizations: Array<FirestoreOrganization>;
-};
-
 type GetDepartmentsByOrganizationIdParams = {
     organizationId: FirestoreOrganization["id"];
 };
@@ -393,6 +383,15 @@ type CreateDepartmentParams = Omit<FirestoreDepartment, "id" | "users" | "create
 type CreateDepartmentResponse = {
     code: 201;
     message: string;
+};
+
+type GetOrganizationsByUserIdParams = {
+    userId: FirestoreUser['id'];
+};
+type GetOrganizationsByUserIdResponse = {
+    code: 200;
+    message: string;
+    organizations: Array<FirestoreOrganization>;
 };
 
 type WhereFilterOpType<T> = T extends Array<infer _U> ? "array-contains" | "array-contains-any" | WhereFilterOp : WhereFilterOp;

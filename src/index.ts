@@ -13,7 +13,6 @@ export { GetRotationsByDepartmentIdParams, GetRotationsByDepartmentIdResponse } 
 export { GetRotationByIdParams, GetRotationByIdResponse } from './types/backend/functions/callable/getRotationById.types';
 export { GetPatternsByUserIdParams, GetPatternsByUserIdResponse } from './types/backend/functions/callable/getPatternsByUserId';
 export { GetPatternByIdParams, GetPatternByIdResponse } from './types/backend/functions/callable/getPatternById.types';
-export { GetOrganizationsByUserIdParams, GetOrganizationsByUserIdResponse } from './types/backend/functions/callable/GetOrganizationsByUserId.types';
 export { GetDepartmentsByOrganizationIdParams, GetDepartmentsByOrganizationIdResponse } from './types/backend/functions/callable/getDepartmentsByOrganizationId';
 export { CreateUserParams, CreateUserResponse } from './types/backend/functions/callable/createUser.types';
 export { CreateTaskParams, CreateTaskResponse } from './types/backend/functions/callable/createTask.types';
@@ -22,6 +21,7 @@ export { RotationPatternDay, CreateRotationParams, CreateRotationResponse } from
 export { CreatePatternParams, CreatePatternResponse } from './types/backend/functions/callable/createPattern.types';
 export { CreateOrganizationParams, CreateOrganizationResponse } from './types/backend/functions/callable/createOrganization.types';
 export { CreateDepartmentParams, CreateDepartmentResponse } from './types/backend/functions/callable/createDepartment.types';
+export { GetOrganizationsByUserIdParams, GetOrganizationsByUserIdResponse } from './types/backend/functions/callable/GetOrganizationsByUserId.types';
 export { WhereFilterOpType, WhereClause } from './functions/getDocsWhere';
 
 

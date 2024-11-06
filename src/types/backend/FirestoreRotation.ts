@@ -22,8 +22,7 @@ export interface RotationBuilderState {
     offset: number
     users: Array<AssignedUser>
     weekPatterns: Array<WeekPattern>
-    isDeprecated?: boolean;
-    replacedBy?: FirestoreRotation["id"];
+    replaces?: FirestoreRotation["id"];
 }
 
 export interface AssignedUser {
