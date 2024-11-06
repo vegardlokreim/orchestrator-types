@@ -20,6 +20,7 @@ export { CreateShiftParams, CreateShiftResponse } from './types/backend/function
 export { RotationPatternDay, CreateRotationParams, CreateRotationResponse } from './types/backend/functions/callable/createRotation.types';
 export { CreatePatternParams, CreatePatternResponse } from './types/backend/functions/callable/createPattern.types';
 export { CreateOrganizationParams, CreateOrganizationResponse } from './types/backend/functions/callable/createOrganization.types';
+export { CreateDepartmentGroupParams, CreateDepartmentGroupResponse } from './types/backend/functions/callable/createDepartmentGroup.types';
 export { CreateDepartmentParams, CreateDepartmentResponse } from './types/backend/functions/callable/createDepartment.types';
 export { GetOrganizationsByUserIdParams, GetOrganizationsByUserIdResponse } from './types/backend/functions/callable/GetOrganizationsByUserId.types';
 export { WhereFilterOpType, WhereClause } from './functions/getDocsWhere';
