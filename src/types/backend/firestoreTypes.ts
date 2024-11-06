@@ -61,6 +61,7 @@ export interface FirestoreDepartment {
     createdAt: Timestamp
     updatedAt: Timestamp
     rotationIds?: Array<FirestoreDepartment["id"]>
+    departmentGroupIds?: Array<FirestoreDepartmentGroup["id"]>
 
 }
 
