@@ -1,33 +1,7 @@
-import {Timestamp} from "firebase-admin/firestore";
-import {USER_ROLES} from "./typeConsts";
-import {AssignedUser, WeekPattern} from "./FirestoreRotation";
+import { Timestamp } from "firebase-admin/firestore";
+import { USER_ROLES } from "./typeConsts";
+import { FirestoreShift, IFirestoreRotation, Weekday } from "./FirestoreRotation";
 
-
-export type Weekday = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
-
-export interface FirestoreShift {
-    id: string;
-    title: string;
-    colorCode: string
-    duration: number,
-    shortCode: string,
-    allowedDays: Weekday[],
-    departmentId: FirestoreDepartment["id"]
-}
-
-
-export interface Day {
-    shift: FirestoreShift | null,
-    tasks?: Array<FirestoreTask>
-    day: Weekday,
-    weekdayNumber: number
-}
-
-export interface Week {
-    weekNumber: number, // weekNumber in rotation, not calendar
-    days: Array<Day>,
-    hours?: number
-}
 
 export type FirestoreUserRole = {
     role: typeof USER_ROLES[number],
@@ -35,7 +9,6 @@ export type FirestoreUserRole = {
     createdAt: Timestamp,
     updatedAt: Timestamp
 }
-
 
 
 export type FirestoreUser = {
@@ -49,8 +22,8 @@ export type FirestoreUser = {
     departments?: Array<FirestoreDepartment["id"]>
     createdAt: Timestamp
     updatedAt: Timestamp
-    rotations?: FirestoreRotation[]
-    rotationIds?: Array<FirestoreRotation["id"]>
+    rotations?: IFirestoreRotation[]
+    rotationIds?: Array<IFirestoreRotation["id"]>
 }
 
 export interface FirestoreDepartment {
@@ -75,16 +48,16 @@ export interface FirestoreOrganization {
 }
 
 
-export type FirestorePattern = {
-    id: string
-    name: string
-    weeks: Array<Week>
-    createdAt: Timestamp,
-    updatedAt: Timestamp,
-    updatedBy: FirestoreUser["id"],
-    createdBy: FirestoreUser["id"], // Possibly irrelevant
-    departmentId: FirestoreDepartment["id"]
-}
+// export type FirestorePattern = {
+//     id: string
+//     name: string
+//     weeks: Array<Week>
+//     createdAt: Timestamp,
+//     updatedAt: Timestamp,
+//     updatedBy: FirestoreUser["id"],
+//     createdBy: FirestoreUser["id"], // Possibly irrelevant
+//     departmentId: FirestoreDepartment["id"]
+// }
 
 
 
@@ -111,7 +84,7 @@ export type FirestoreTask = {
 
 
 export interface ShiftInstance {
-    rotationId: FirestoreRotation["id"]; // ID of the rotation
+    rotationId: IFirestoreRotation["id"]; // ID of the rotation
     weekNumber: number; // Week number in the rotation plan
     day: Weekday; // Day of the week
     date: Date; // Actual date of the shift
@@ -136,28 +109,6 @@ export type FirestoreShiftSwapProposal = {
 }
 
 
-export interface FirestoreRotation {
-    id: string
-    basicInfo: {
-        name: string
-        startDate: string
-        departmentId: FirestoreDepartment["id"]
-        groupId?: FirestoreDepartmentGroup["id"]
-    }
-
-    weekPatterns: Array<WeekPattern>
-    users: Array<AssignedUser>
-    userIds: Array<FirestoreUser["id"]>
-    offset: number
-
-    isDeprecated?: boolean;
-    replacedBy?: FirestoreRotation["id"];
-    replaces?: FirestoreRotation["id"];
-
-    createdAt: Timestamp
-    updatedAt: Timestamp
-    createdBy: FirestoreUser["id"]
-}
 
 export type FirestoreDepartmentGroup = {
     id: string

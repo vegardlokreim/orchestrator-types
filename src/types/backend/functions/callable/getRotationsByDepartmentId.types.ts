@@ -1,4 +1,4 @@
-import { FirestoreRotation } from "../../firestoreTypes";
+import { IFirestoreRotation } from "../../FirestoreRotation";
 
 export type GetRotationsByDepartmentIdParams = {
     departmentId: string;
@@ -7,5 +7,5 @@ export type GetRotationsByDepartmentIdParams = {
 export type GetRotationsByDepartmentIdResponse = {
     code: 200;
     message: string;
-    rotations: FirestoreRotation[];
+    rotations: IFirestoreRotation[];
 };

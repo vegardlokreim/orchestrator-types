@@ -1,12 +1,11 @@
-import { RotationBuilderState } from "../../FirestoreRotation"
-import { FirestoreRotation } from "../../firestoreTypes"
+import { IFirestoreRotation, RotationBuilderState } from "../../FirestoreRotation"
 
 export interface RotationPatternDay {
     shiftId: string,
     taskIds: string[]
 }
 
-export type CreateRotationParams = Omit<FirestoreRotation, "id" | "createdAt" | "updatedAt">
+export type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt">
 
 export interface CreateRotationResponse {
     code: 201,

@@ -222,12 +222,46 @@ var USER_ROLES = [
   "LIS2",
   "LIS3"
 ];
+
+// src/functions/rotationHelpers.ts
+import { differenceInWeeks, isBefore } from "date-fns";
+var getStartWeek = (userId, rotation) => {
+  const user = rotation.users.find((user2) => user2.userId === userId);
+  if (user) return user.startWeek;
+  return null;
+};
+var getRotationWeekNumberAtDate = (userId, rotation, date) => {
+  const dateIsBeforeRotationStartDate = isBefore(date, rotation.startDate);
+  if (dateIsBeforeRotationStartDate) return null;
+  const userStartWeek = getStartWeek(userId, rotation);
+  if (!userStartWeek) return null;
+  const rotationStartDate = new Date(rotation.startDate);
+  const diff = differenceInWeeks(date, rotationStartDate);
+  const rotationWeeks = Object.keys(rotation.weeks).length;
+  return (diff + userStartWeek) % rotationWeeks;
+};
+var getRotationWeekAtDate = (userId, rotation, date) => {
+  const rotationWeekNumber = getRotationWeekNumberAtDate(userId, rotation, date);
+  if (!rotationWeekNumber) return null;
+  return rotation.weeks[rotationWeekNumber];
+};
+var sortDays = (days) => {
+  const sortedDays = Object.entries(days).sort(([a], [b]) => {
+    const days2 = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    return days2.indexOf(a) - days2.indexOf(b);
+  });
+  return Object.fromEntries(sortedDays);
+};
 export {
   USER_ROLES,
   callFunction,
   firestoreCollections,
   formatDate,
   getDocsWhere,
+  getRotationWeekAtDate,
+  getRotationWeekNumberAtDate,
+  getStartWeek,
+  sortDays,
   timestampToDate,
   useFetchDoc,
   useFetchDocs,

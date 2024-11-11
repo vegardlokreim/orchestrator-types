@@ -25,6 +25,10 @@ __export(src_exports, {
   firestoreCollections: () => firestoreCollections,
   formatDate: () => formatDate,
   getDocsWhere: () => getDocsWhere,
+  getRotationWeekAtDate: () => getRotationWeekAtDate,
+  getRotationWeekNumberAtDate: () => getRotationWeekNumberAtDate,
+  getStartWeek: () => getStartWeek,
+  sortDays: () => sortDays,
   timestampToDate: () => timestampToDate,
   useFetchDoc: () => useFetchDoc,
   useFetchDocs: () => useFetchDocs,
@@ -258,6 +262,36 @@ var USER_ROLES = [
   "LIS2",
   "LIS3"
 ];
+
+// src/functions/rotationHelpers.ts
+var import_date_fns = require("date-fns");
+var getStartWeek = (userId, rotation) => {
+  const user = rotation.users.find((user2) => user2.userId === userId);
+  if (user) return user.startWeek;
+  return null;
+};
+var getRotationWeekNumberAtDate = (userId, rotation, date) => {
+  const dateIsBeforeRotationStartDate = (0, import_date_fns.isBefore)(date, rotation.startDate);
+  if (dateIsBeforeRotationStartDate) return null;
+  const userStartWeek = getStartWeek(userId, rotation);
+  if (!userStartWeek) return null;
+  const rotationStartDate = new Date(rotation.startDate);
+  const diff = (0, import_date_fns.differenceInWeeks)(date, rotationStartDate);
+  const rotationWeeks = Object.keys(rotation.weeks).length;
+  return (diff + userStartWeek) % rotationWeeks;
+};
+var getRotationWeekAtDate = (userId, rotation, date) => {
+  const rotationWeekNumber = getRotationWeekNumberAtDate(userId, rotation, date);
+  if (!rotationWeekNumber) return null;
+  return rotation.weeks[rotationWeekNumber];
+};
+var sortDays = (days) => {
+  const sortedDays = Object.entries(days).sort(([a], [b]) => {
+    const days2 = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    return days2.indexOf(a) - days2.indexOf(b);
+  });
+  return Object.fromEntries(sortedDays);
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   USER_ROLES,
@@ -265,6 +299,10 @@ var USER_ROLES = [
   firestoreCollections,
   formatDate,
   getDocsWhere,
+  getRotationWeekAtDate,
+  getRotationWeekNumberAtDate,
+  getStartWeek,
+  sortDays,
   timestampToDate,
   useFetchDoc,
   useFetchDocs,
