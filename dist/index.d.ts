@@ -105,29 +105,29 @@ interface IFirestoreRotation {
     name: string;
     departmentId: string;
     departmentName: string;
-    startDate: Timestamp;
-    endDate?: Timestamp;
     users: IRotationUser[];
     weeks: IRotationWeek[];
-    replaces?: IFirestoreRotation["id"];
+    replaces: IFirestoreRotation["id"] | null;
     updatedAt: Timestamp;
     createdAt: Timestamp;
     createdBy: FirestoreUser["id"];
-    groupId?: FirestoreDepartmentGroup["id"];
-    replaced?: {
+    groupId: FirestoreDepartmentGroup["id"] | null;
+    replaced: {
         replacedBy: IFirestoreRotation["id"];
         replacedAt: Timestamp;
-    };
+    } | null;
+    startDate: Timestamp;
+    endDate: Timestamp | null;
     startDateNumbers: {
         day: number;
         month: number;
         year: number;
     };
-    endDateNumbers?: {
+    endDateNumbers: {
         day: number;
         month: number;
         year: number;
-    };
+    } | null;
     userIds: FirestoreUser["id"][];
     shiftIds: FirestoreShift["id"][];
     taskIds: FirestoreTask["id"][];
