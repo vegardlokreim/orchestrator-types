@@ -318,7 +318,7 @@ interface RotationPatternDay {
     shiftId: string;
     taskIds: string[];
 }
-type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt" | "createdBy" | "userIds" | "startDate" | "starteDateString"> & {
+type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt" | "createdBy" | "userIds" | "startDate" | "startDateString"> & {
     startDate: Date;
 };
 interface CreateRotationResponse {
