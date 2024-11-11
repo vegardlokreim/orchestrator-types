@@ -12,10 +12,13 @@ export type CreateRotationParams =
         | "updatedAt"
         | "createdBy"
         | "userIds"
+        | "shiftIds"
+        | "taskIds"
         | "startDate"
-        | "startDateString"
+        | "endDate"
     > & {
         startDate: Date,
+        endDate: Date | null,
     }
 
 export interface CreateRotationResponse {
