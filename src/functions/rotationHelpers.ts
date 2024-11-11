@@ -1,5 +1,6 @@
 import { IFirestoreRotation, IRotationDay, Weekday } from "../types/backend/FirestoreRotation";
 import { differenceInWeeks, isBefore } from 'date-fns';
+import { timestampToDate } from "./timestampToDate";
 
 export const getStartWeek = (userId: string, rotation: IFirestoreRotation) => {
     const user = rotation.users.find(user => user.userId === userId);
@@ -8,12 +9,12 @@ export const getStartWeek = (userId: string, rotation: IFirestoreRotation) => {
 };
 
 export const getRotationWeekNumberAtDate = (userId: string, rotation: IFirestoreRotation, date: Date) => {
-    const dateIsBeforeRotationStartDate = isBefore(date, rotation.startDate.toDate());
+    const dateIsBeforeRotationStartDate = isBefore(date, timestampToDate(rotation.startDate));
     if (dateIsBeforeRotationStartDate) return null;
     const userStartWeek = getStartWeek(userId, rotation);
     if (!userStartWeek) return null;
 
-    const rotationStartDate = rotation.startDate.toDate();
+    const rotationStartDate = timestampToDate(rotation.startDate);
     const diff = differenceInWeeks(date, rotationStartDate);
     const rotationWeeks = Object.keys(rotation.weeks).length;
 
