@@ -87,6 +87,8 @@ export interface RotationBuilderState {
     users: {
         userId: string | null;
         fullName: string | null;
+        firstName: string | null;
+        lastName: string | null;
         startWeek: number | null;
     }[];
     weeks: Record<number, IRotationWeek>;
@@ -94,36 +96,11 @@ export interface RotationBuilderState {
     replaces: IFirestoreRotation | null;
 }
 
-
-
-
-// export interface FirestoreRotation {
-//     id: string
-//     basicInfo: {
-//         name: string
-//         startDate: string
-//         departmentId: FirestoreDepartment["id"]
-//         groupId?: FirestoreDepartmentGroup["id"]
-//     }
-
-//     weekPatterns: Array<WeekPattern>
-//     users: Array<AssignedUser>
-//     userIds: Array<FirestoreUser["id"]>
-//     offset: number
-
-//     isDeprecated?: boolean;
-//     replacedBy?: FirestoreRotation["id"];
-//     replaces?: FirestoreRotation["id"];
-
-//     createdAt: Timestamp
-//     updatedAt: Timestamp
-//     createdBy: FirestoreUser["id"]
-// }
-
-
 export interface IRotationUser {
     userId: string;
     fullName: string;
+    firstName: string;
+    lastName: string;
     startWeek: number;
 }
 
@@ -135,32 +112,57 @@ export interface IRotationDay {
 
 export interface IRotationWeek {
     rotationWeek: number;
-    days: Record<Weekday, IRotationDay>;
+    monday: IRotationDay;
+    tuesday: IRotationDay;
+    wednesday: IRotationDay;
+    thursday: IRotationDay;
+    friday: IRotationDay;
+    saturday: IRotationDay;
+    sunday: IRotationDay;
 }
 
 
 export interface IFirestoreRotation {
     id: string;
     name: string;
+
     departmentId: string;
     departmentName: string;
 
     startDate: Timestamp;
-    isDeprecated: boolean;
+    endDate?: Timestamp;
+
     users: IRotationUser[];
-    weeks: Record<number, IRotationWeek>;
+    weeks: IRotationWeek[];
+
     replaces?: IFirestoreRotation["id"]
+
     updatedAt: Timestamp;
     createdAt: Timestamp;
     createdBy: FirestoreUser["id"];
-    userIds: FirestoreUser["id"][];
-    replacedBy?: IFirestoreRotation["id"];
-    startDateString: string;
-    startDateNumber: {
+
+    groupId?: FirestoreDepartmentGroup["id"];
+
+    replaced?: {
+        replacedBy: IFirestoreRotation["id"];
+        replacedAt: Timestamp;
+    }
+    startDateNumbers: {
         day: number;
         month: number;
         year: number;
     }
+
+    endDateNumbers?: {
+        day: number;
+        month: number;
+        year: number;
+    }
+
+    userIds: FirestoreUser["id"][];
+    shiftIds: FirestoreShift["id"][];
+    taskIds: FirestoreTask["id"][];
+
 
 }
 
