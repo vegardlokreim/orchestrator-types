@@ -106,6 +106,11 @@ interface IFirestoreRotation {
     userIds: FirestoreUser["id"][];
     replacedBy?: IFirestoreRotation["id"];
     startDateString: string;
+    startDateNumber: {
+        day: number;
+        month: number;
+        year: number;
+    };
 }
 
 type FirestoreUserRole = {
