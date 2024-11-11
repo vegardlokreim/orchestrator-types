@@ -13,6 +13,7 @@ export type CreateRotationParams =
         | "createdBy"
         | "userIds"
         | "startDate"
+        | "starteDateString"
     > & {
         startDate: Date,
     }

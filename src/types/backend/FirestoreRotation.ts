@@ -155,6 +155,7 @@ export interface IFirestoreRotation {
     createdBy: FirestoreUser["id"];
     userIds: FirestoreUser["id"][];
     replacedBy?: IFirestoreRotation["id"];
+    startDateString: string;
 
 }
 
