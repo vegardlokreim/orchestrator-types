@@ -153,6 +153,7 @@ export interface IFirestoreRotation {
     updatedAt: Timestamp;
     createdAt: Timestamp;
     createdBy: FirestoreUser["id"];
+    userIds: FirestoreUser["id"][];
 
 }
 
