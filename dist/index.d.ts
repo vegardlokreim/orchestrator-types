@@ -61,23 +61,6 @@ interface FirestoreShift {
     allowedDays: Weekday[];
     departmentId: FirestoreDepartment["id"];
 }
-interface RotationBuilderState {
-    currentStep: 1 | 2 | 3 | 4;
-    name: string;
-    startDate: Date;
-    departmentId: FirestoreDepartment["id"];
-    groupId?: FirestoreDepartmentGroup["id"];
-    offset: number;
-    users: {
-        userId: string | null;
-        fullName: string | null;
-        firstName: string | null;
-        lastName: string | null;
-        startWeek: number | null;
-    }[];
-    weeks: Record<number, IRotationWeek>;
-    replaces: IFirestoreRotation | null;
-}
 interface IRotationUser {
     userId: string;
     fullName: string;
@@ -420,4 +403,4 @@ declare const getRotationWeekNumberAtDate: (userId: string, rotation: IFirestore
 declare const getRotationWeekAtDate: (userId: string, rotation: IFirestoreRotation, date: Date) => IRotationWeek | null;
 declare const sortDays: (days: Record<string, IRotationDay>) => Record<Weekday, IRotationDay>;
 
-export { type CreateDepartmentGroupParams, type CreateDepartmentGroupResponse, type CreateDepartmentParams, type CreateDepartmentResponse, type CreateOrganizationParams, type CreateOrganizationResponse, type CreateRotationParams, type CreateRotationResponse, type CreateShiftParams, type CreateShiftResponse, type CreateTaskParams, type CreateTaskResponse, type CreateUserParams, type CreateUserResponse, type DeepRequired, type DeepRequiredNonNull, type FirestoreCollection, type FirestoreDepartment, type FirestoreDepartmentGroup, type FirestoreOrganization, type FirestoreShift, type FirestoreShiftSwapProposal, type FirestoreTask, type FirestoreUser, type FirestoreUserRole, type GetDepartmentsByOrganizationIdParams, type GetDepartmentsByOrganizationIdResponse, type GetOrganizationsByUserIdParams, type GetOrganizationsByUserIdResponse, type GetRotationByIdParams, type GetRotationByIdResponse, type GetRotationsByDepartmentIdParams, type GetRotationsByDepartmentIdResponse, type GetRotationsByUserIdParams, type GetRotationsByUserIdResponse, type GetShiftsByDepartmentIdParams, type GetShiftsByDepartmentIdResponse, type GetTasksByDepartmentIdParams, type GetTasksByDepartmentIdResponse, type GetUserInfoParams, type GetUserInfoResponse, type GetUsersByDepartmentIdParams, type GetUsersByDepartmentIdResponse, type GetUsersByIdsParams, type GetUsersByIdsResponse, type HomePageProps, type IFirestoreRotation, type IRotationDay, type IRotationUser, type IRotationWeek, type RotationBuilderState, type RotationPatternDay, type ShiftInstance, type Subset, type SwapStatus, USER_ROLES, type UserStoragePath, type Weekday, type WhereClause, type WhereFilterOpType, callFunction, firestoreCollections, formatDate, getDocsWhere, getRotationWeekAtDate, getRotationWeekNumberAtDate, getStartWeek, sortDays, timestampToDate, useFetchDoc, useFetchDocs, useFetchDocsWhere, useScrollToTop, userStoragePath };
+export { type CreateDepartmentGroupParams, type CreateDepartmentGroupResponse, type CreateDepartmentParams, type CreateDepartmentResponse, type CreateOrganizationParams, type CreateOrganizationResponse, type CreateRotationParams, type CreateRotationResponse, type CreateShiftParams, type CreateShiftResponse, type CreateTaskParams, type CreateTaskResponse, type CreateUserParams, type CreateUserResponse, type DeepRequired, type DeepRequiredNonNull, type FirestoreCollection, type FirestoreDepartment, type FirestoreDepartmentGroup, type FirestoreOrganization, type FirestoreShift, type FirestoreShiftSwapProposal, type FirestoreTask, type FirestoreUser, type FirestoreUserRole, type GetDepartmentsByOrganizationIdParams, type GetDepartmentsByOrganizationIdResponse, type GetOrganizationsByUserIdParams, type GetOrganizationsByUserIdResponse, type GetRotationByIdParams, type GetRotationByIdResponse, type GetRotationsByDepartmentIdParams, type GetRotationsByDepartmentIdResponse, type GetRotationsByUserIdParams, type GetRotationsByUserIdResponse, type GetShiftsByDepartmentIdParams, type GetShiftsByDepartmentIdResponse, type GetTasksByDepartmentIdParams, type GetTasksByDepartmentIdResponse, type GetUserInfoParams, type GetUserInfoResponse, type GetUsersByDepartmentIdParams, type GetUsersByDepartmentIdResponse, type GetUsersByIdsParams, type GetUsersByIdsResponse, type HomePageProps, type IFirestoreRotation, type IRotationDay, type IRotationUser, type IRotationWeek, type RotationPatternDay, type ShiftInstance, type Subset, type SwapStatus, USER_ROLES, type UserStoragePath, type Weekday, type WhereClause, type WhereFilterOpType, callFunction, firestoreCollections, formatDate, getDocsWhere, getRotationWeekAtDate, getRotationWeekNumberAtDate, getStartWeek, sortDays, timestampToDate, useFetchDoc, useFetchDocs, useFetchDocsWhere, useScrollToTop, userStoragePath };

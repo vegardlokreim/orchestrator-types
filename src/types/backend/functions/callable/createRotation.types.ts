@@ -1,4 +1,6 @@
-import { IFirestoreRotation, RotationBuilderState } from "../../FirestoreRotation"
+import {
+    IFirestoreRotation
+} from "../../FirestoreRotation"
 
 export interface RotationPatternDay {
     shiftId: string,

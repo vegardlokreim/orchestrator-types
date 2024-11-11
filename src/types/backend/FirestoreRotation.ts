@@ -73,28 +73,7 @@ export interface FirestoreShift {
 //     days: Record<Weekday, DaySchedule>;
 // }
 
-export interface RotationBuilderState {
-    currentStep: 1 | 2 | 3 | 4;
 
-    name: string;
-    startDate: Date;
-
-    departmentId: FirestoreDepartment["id"];
-    groupId?: FirestoreDepartmentGroup["id"];
-
-    offset: number;
-
-    users: {
-        userId: string | null;
-        fullName: string | null;
-        firstName: string | null;
-        lastName: string | null;
-        startWeek: number | null;
-    }[];
-    weeks: Record<number, IRotationWeek>;
-
-    replaces: IFirestoreRotation | null;
-}
 
 export interface IRotationUser {
     userId: string;

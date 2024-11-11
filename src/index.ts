@@ -2,7 +2,7 @@
 export { Subset, DeepRequired, DeepRequiredNonNull, FirestoreCollection, UserStoragePath } from './types/commonTypes';
 export { HomePageProps } from './types/web/HomePage.types';
 export { FirestoreUserRole, FirestoreUser, FirestoreDepartment, FirestoreOrganization, FirestoreTask, ShiftInstance, SwapStatus, FirestoreShiftSwapProposal, FirestoreDepartmentGroup } from './types/backend/firestoreTypes';
-export { Weekday, FirestoreShift, RotationBuilderState, IRotationUser, IRotationDay, IRotationWeek, IFirestoreRotation } from './types/backend/FirestoreRotation';
+export { Weekday, FirestoreShift, IRotationUser, IRotationDay, IRotationWeek, IFirestoreRotation } from './types/backend/FirestoreRotation';
 export { GetUsersByIdsParams, GetUsersByIdsResponse } from './types/backend/functions/callable/getUsersByIds.types';
 export { GetUsersByDepartmentIdParams, GetUsersByDepartmentIdResponse } from './types/backend/functions/callable/getUsersByDepartmenId.types';
 export { GetUserInfoParams, GetUserInfoResponse } from './types/backend/functions/callable/getUserInfo.types';
