@@ -150,6 +150,10 @@ export interface IFirestoreRotation {
     users: IRotationUser[];
     weeks: Record<number, IRotationWeek>;
     replaces?: IFirestoreRotation["id"]
+    updatedAt: Timestamp;
+    createdAt: Timestamp;
+    createdBy: FirestoreUser["id"];
+
 }
 
 

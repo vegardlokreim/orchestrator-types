@@ -100,6 +100,9 @@ interface IFirestoreRotation {
     users: IRotationUser[];
     weeks: Record<number, IRotationWeek>;
     replaces?: IFirestoreRotation["id"];
+    updatedAt: Timestamp;
+    createdAt: Timestamp;
+    createdBy: FirestoreUser["id"];
 }
 
 type FirestoreUserRole = {
@@ -312,7 +315,7 @@ interface RotationPatternDay {
     shiftId: string;
     taskIds: string[];
 }
-type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt">;
+type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt" | "createdBy" | "userIds">;
 interface CreateRotationResponse {
     code: 201;
     message: "Rotation created successfully";

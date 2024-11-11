@@ -5,7 +5,7 @@ export interface RotationPatternDay {
     taskIds: string[]
 }
 
-export type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt">
+export type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt" | "createdBy" | "userIds">
 
 export interface CreateRotationResponse {
     code: 201,
