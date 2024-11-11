@@ -8,12 +8,12 @@ export const getStartWeek = (userId: string, rotation: IFirestoreRotation) => {
 };
 
 export const getRotationWeekNumberAtDate = (userId: string, rotation: IFirestoreRotation, date: Date) => {
-    const dateIsBeforeRotationStartDate = isBefore(date, rotation.startDate);
+    const dateIsBeforeRotationStartDate = isBefore(date, rotation.startDate.toDate());
     if (dateIsBeforeRotationStartDate) return null;
     const userStartWeek = getStartWeek(userId, rotation);
     if (!userStartWeek) return null;
 
-    const rotationStartDate = new Date(rotation.startDate);
+    const rotationStartDate = rotation.startDate.toDate();
     const diff = differenceInWeeks(date, rotationStartDate);
     const rotationWeeks = Object.keys(rotation.weeks).length;
 

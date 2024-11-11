@@ -271,11 +271,11 @@ var getStartWeek = (userId, rotation) => {
   return null;
 };
 var getRotationWeekNumberAtDate = (userId, rotation, date) => {
-  const dateIsBeforeRotationStartDate = (0, import_date_fns.isBefore)(date, rotation.startDate);
+  const dateIsBeforeRotationStartDate = (0, import_date_fns.isBefore)(date, rotation.startDate.toDate());
   if (dateIsBeforeRotationStartDate) return null;
   const userStartWeek = getStartWeek(userId, rotation);
   if (!userStartWeek) return null;
-  const rotationStartDate = new Date(rotation.startDate);
+  const rotationStartDate = rotation.startDate.toDate();
   const diff = (0, import_date_fns.differenceInWeeks)(date, rotationStartDate);
   const rotationWeeks = Object.keys(rotation.weeks).length;
   return (diff + userStartWeek) % rotationWeeks;

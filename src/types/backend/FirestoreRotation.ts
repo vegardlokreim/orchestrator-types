@@ -145,7 +145,7 @@ export interface IFirestoreRotation {
     departmentId: string;
     departmentName: string;
 
-    startDate: Date;
+    startDate: Timestamp;
     isDeprecated: boolean;
     users: IRotationUser[];
     weeks: Record<number, IRotationWeek>;

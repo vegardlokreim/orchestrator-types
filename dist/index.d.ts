@@ -95,7 +95,7 @@ interface IFirestoreRotation {
     name: string;
     departmentId: string;
     departmentName: string;
-    startDate: Date;
+    startDate: Timestamp;
     isDeprecated: boolean;
     users: IRotationUser[];
     weeks: Record<number, IRotationWeek>;
@@ -317,7 +317,9 @@ interface RotationPatternDay {
     shiftId: string;
     taskIds: string[];
 }
-type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt" | "createdBy" | "userIds">;
+type CreateRotationParams = Omit<IFirestoreRotation, "id" | "createdAt" | "updatedAt" | "createdBy" | "userIds" | "startDate"> & {
+    startDate: Date;
+};
 interface CreateRotationResponse {
     code: 201;
     message: "Rotation created successfully";
