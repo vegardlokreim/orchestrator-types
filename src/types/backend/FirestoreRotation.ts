@@ -112,13 +112,7 @@ export interface IRotationDay {
 
 export interface IRotationWeek {
     rotationWeek: number;
-    monday: IRotationDay;
-    tuesday: IRotationDay;
-    wednesday: IRotationDay;
-    thursday: IRotationDay;
-    friday: IRotationDay;
-    saturday: IRotationDay;
-    sunday: IRotationDay;
+    days: Record<Weekday, IRotationDay>;
 }
 
 
